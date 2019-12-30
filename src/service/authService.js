@@ -1,21 +1,20 @@
 import axios from 'axios';
+import querystring from 'querystring';
+import regeneratorRuntime from "regenerator-runtime";
 
 
-export default class authService {
-
-
-
-  static getTgt(apikey){
-    const umlsServer = axios.create({
+export const getTgt = async apikey => {
+    
+    const config = {
       baseURL: "https://utslogin.nlm.nih.gov/cas/v1/",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    });
-    const data = {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    }
+    const requestBody = {
       apikey: apikey
     }
-    return umlsServer.post('api-key', data);
-  }
+    const response = await axios.post('api-key', querystring.stringify(requestBody), config)
+    return response.data
+  };
 
-}
