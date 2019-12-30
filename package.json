@@ -27,7 +27,6 @@
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "np": "*"
-
   },
   "author": "Bell Eapen",
   "license": "UNLICENSED",
