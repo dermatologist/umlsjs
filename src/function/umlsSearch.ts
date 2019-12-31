@@ -1,29 +1,17 @@
 
 import { getService } from '../service/generalService'
 import SearchModel from '../model/search'
+import UMLSQueryTemplate from '../model/queryTemplate'
 
-class UMLSSearch {
-    apikey: string
-    search_term: string
-    exact: boolean
-    version: string
+class UMLSSearch extends UMLSQueryTemplate{
     results: Array<typeof SearchModel>
 
-    constructor(apikey, search_term, exact=false, version = 'current'){
-        this.apikey = apikey
-        this.search_term = search_term
-        this.exact = exact
-        this.version = version
-    }
-
-    
-
-    async search() {
+    async query() {
         const params: any = {}
-        if(this.exact)
+        if(this.id)
             params.searchType = 'exact'
         const url = `/search/${this.version}`
-        params.string = this.search_term
+        params.string = this.term
         //console.log(this.apikey, url, params)
         const response = await getService(this.apikey, url, params)
         this.results = response.result.results
