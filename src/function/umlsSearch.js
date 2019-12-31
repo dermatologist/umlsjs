@@ -13,7 +13,7 @@ class UMLSSearch {
 
     
 
-    async getResults() {
+    async search() {
         const params = {}
         if(this.exact)
             params.searchType = 'exact'
@@ -22,8 +22,11 @@ class UMLSSearch {
         //console.log(this.apikey, url, params)
         const response = await getService(this.apikey, url, params)
         this.search = response.result.results
-        return this.search
     } 
+
+    getResults() {
+        return this.search
+    }
 }
 
 export default UMLSSearch;

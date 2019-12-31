@@ -5,3 +5,9 @@
 //   fhirformjs: ffjs,
 //   fhirformResp: ffresp
 // };
+
+import UMLSSearch from './function/umlsSearch'
+
+module.exports = {
+    Search: UMLSSearch
+}
