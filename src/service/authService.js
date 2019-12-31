@@ -4,6 +4,18 @@ import regeneratorRuntime from "regenerator-runtime";
 import parser from 'fast-xml-parser'
 import he from 'he'
 
+export const getSt = async apikey => {
+  const tgt = await getTgt(apikey)
+  const config = {
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+  }
+  const url = `https://utslogin.nlm.nih.gov/cas/v1/tickets/${tgt}`
+  const response = await axios.post(url, 'service=http%3A%2F%2Fumlsks.nlm.nih.gov', config)
+  return response.data
+}
+
 export const getTgt = async apikey => {
   if(getTgtFromCache())
     return getTgtFromCache()
