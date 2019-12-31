@@ -9,5 +9,5 @@
 import UMLSSearch from './function/umlsSearch'
 
 module.exports = {
-    Search: UMLSSearch
+    UMLSSearch: UMLSSearch
 }
