@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "description": "Nodejs package to access UMLS REST web-services",
   "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "npx babel src --out-dir dist",
     "start": "npx babel src --watch --out-dir dist",
-    "release": "np --any-branch --no-yarn --no-release-draft --contents dist",
+    "release": "np --any-branch --no-yarn --no-release-draft --contents=dist",
     "test": "jest --detectOpenHandles"
   },
   "repository": {
