@@ -1,5 +1,6 @@
 import axios from 'axios';
 import querystring from 'querystring';
+// This is required
 import regeneratorRuntime from "regenerator-runtime";
 import parser from 'fast-xml-parser'
 import he from 'he'
@@ -50,7 +51,7 @@ export const getTgt = async apikey => {
       }
       const apiFunction = 'api-key'
       const response = await axios.post(apiFunction, querystring.stringify(requestBody), config)
-      const jsonObj = parser.parse(response.data, options) 
+      const jsonObj = parser.parse(response.data, options)
       const urlWithTgt = jsonObj.html.body.form.attr.U_action
       const url = config.baseURL+apiFunction+'/'
       const tgt = urlWithTgt.replace(url, '')
@@ -72,7 +73,7 @@ export const getTgt = async apikey => {
     const prevSaved = localStorage.getItem("tgt_time");
     const currentTime = new Date().getTime();
 
-    const prevSavedExpired = prevSaved != undefined && currentTime - prevSaved > expirationDuration;
+    const prevSavedExpired = prevSaved !== undefined && currentTime - prevSaved > expirationDuration;
 
     if (prevSaved || !prevSavedExpired) {
       return localStorage.getItem("tgt_value");

@@ -1,8 +1,6 @@
 import axios from 'axios';
-import querystring from 'querystring';
+// This is required
 import regeneratorRuntime from "regenerator-runtime";
-import parser from 'fast-xml-parser'
-import he from 'he'
 import { getSt } from './authService'
 /*
 INPUTS:
@@ -19,7 +17,6 @@ export const getService = async (apikey, url, params={}) => {
     url: fullUrl,
     params: params
   }
-  // console.log(config)
   const response = await axios(config)
   return(response.data)
 }

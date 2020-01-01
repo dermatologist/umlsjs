@@ -36,6 +36,12 @@
   },
   "author": "Bell Eapen",
   "license": "MIT",
+  "np": {
+    "yarn": false,
+    "contents": "dist",
+    "releaseDraft": false,
+    "anyBranch": true
+  },
   "bugs": {
     "url": "https://github.com/dermatologist/umlsjs/issues"
   },
