@@ -2,3 +2,5 @@
 node_modules
 dist
 .vscode
+test/api.js
+.idea

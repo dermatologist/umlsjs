@@ -1,5 +1,5 @@
-const tellMeTheMeaningOfLife = () => {
-    console.log("Hello World");
-  };
-  
-  export default tellMeTheMeaningOfLife;
+import UMLSSearch from './function/umlsSearch'
+
+module.exports = {
+    UMLSSearch: UMLSSearch
+}
