@@ -7,7 +7,7 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "npx babel src --out-dir dist",
+    "build": "npx babel src --extensions \".ts,.js\" --out-dir dist",
     "start": "npx babel src --watch --out-dir dist",
     "release": "np --any-branch --no-yarn --no-release-draft --contents=dist",
     "test": "jest --detectOpenHandles"
@@ -35,7 +35,8 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-typescript": "^7.7.7",
     "babel-jest": "^24.8.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "typescript": "^3.7.4"
   },
   "author": "Bell Eapen",
   "license": "MIT",
