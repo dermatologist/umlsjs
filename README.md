@@ -12,7 +12,10 @@ npm install umlsjs --save
 ## Usage
 ```
 import { UMLSSearch } from 'umlsjs'
-const search1 = new UMLSSearch(API_KEY, 'Erythema Multiforme')
+const search1 = new UMLSSearch(API_KEY)
+search1.init('Erythema Multiforme')
+// search1.init('Erythema Multiforme', true) for exact search
+// search1.init('Erythema Multiforme', false, 'current')
 await search1.query()
 const results = search1.getResults()
 
@@ -21,7 +24,7 @@ const results = search1.getResults()
 ## More to come
 
 * UMLSContent
-* UMLSASubsets
+* UMLSSubsets
 * UMLSSemanticNetwork
 * UMLSContentView
 * UMLSCrosswalk
