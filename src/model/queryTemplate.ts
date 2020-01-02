@@ -14,15 +14,14 @@ class UMLSQueryTemplate {
         this.results = []
     }
 
-    async query(term, id=null, version = 'current') {
+    async init(term, id=null, version = 'current') {
         this.term = term
         this.id = id
         this.version = version
-        this.performQuery()
     } 
 
     // @Override
-    performQuery() {
+    query() {
 
     }
 
