@@ -6,7 +6,7 @@ import UMLSQueryTemplate from '../model/queryTemplate'
 class UMLSSearch extends UMLSQueryTemplate{
     results: Array<typeof SearchModel>
 
-    async query() {
+    async performQuery() {
         const params: any = {}
         if(this.id)
             params.searchType = 'exact'

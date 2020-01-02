@@ -9,19 +9,22 @@ class UMLSQueryTemplate {
     version: string
     results: Array<any>
 
-    constructor(apikey, term, id=null, version = 'current'){
+    constructor(apikey){
         this.apikey = apikey
-        this.term = term
-        this.id = id
-        this.version = version
         this.results = []
     }
 
-    
-
-    async query() {
-        
+    async query(term, id=null, version = 'current') {
+        this.term = term
+        this.id = id
+        this.version = version
+        this.performQuery()
     } 
+
+    // @Override
+    performQuery() {
+
+    }
 
     getResults(): Array<any> {
         return this.results

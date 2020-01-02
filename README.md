@@ -21,7 +21,7 @@ const results = search1.getResults()
 ## More to come
 
 * UMLSContent
-* UMLSASubsets
+* UMLSSubsets
 * UMLSSemanticNetwork
 * UMLSContentView
 * UMLSCrosswalk
