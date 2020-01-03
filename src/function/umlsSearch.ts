@@ -15,6 +15,8 @@ class UMLSSearch extends UMLSQueryTemplate{
         //console.log(this.apikey, url, params)
         const response = await getService(this.apikey, url, params)
         this.results = response.result.results
+        this.pageNumber = response.pageNumber
+        this.pageSize = response.pageSize
     } 
 
     getResults(): Array<typeof SearchModel> {

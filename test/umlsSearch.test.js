@@ -7,6 +7,7 @@ test('Get Results for a term', async () => {
     await search1.query()
     const results = search1.getResults()
     expect(results.length).toBeGreaterThan(1)
+    expect(search1.pageNumber).toBe(1)
 })
 
 test('Get Results for a two terms', async () => {
