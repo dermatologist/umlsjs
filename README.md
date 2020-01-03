@@ -10,6 +10,9 @@ npm install umlsjs --save
 ```
 
 ## Usage
+
+* Search
+
 ```
 import { UMLSSearch } from 'umlsjs'
 const search1 = new UMLSSearch(API_KEY)
@@ -18,6 +21,19 @@ search1.init('Erythema Multiforme')
 // search1.init('Erythema Multiforme', false, 'current')
 await search1.query()
 const results = search1.getResults()
+
+```
+
+* CUI
+
+```
+    import { CUISearch } from 'umlsjs'
+    const search1 = new CUISearch(API_KEY)
+    const CUI = 'C0009044'
+    search1.init(CUI)
+    await search1.query()
+    const result = search1.getResult()
+    console.log(result.name)
 
 ```
 
