@@ -8,6 +8,7 @@ class UMLSQueryTemplate {
     id: any
     version: string
     results: Array<any>
+    result: any
 
     constructor(apikey){
         this.apikey = apikey
@@ -27,6 +28,10 @@ class UMLSQueryTemplate {
 
     getResults(): Array<any> {
         return this.results
+    }
+
+    getResult(): any {
+        return this.result
     }
 }
 
