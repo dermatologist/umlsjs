@@ -1,7 +1,3 @@
-
-import { getService } from '../service/generalService'
-import SearchModel from '../model/search'
-
 class UMLSQueryTemplate {
     apikey: string
     term: string
