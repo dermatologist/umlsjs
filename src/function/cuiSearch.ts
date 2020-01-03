@@ -11,6 +11,9 @@ class CUISearch extends UMLSQueryTemplate{
         const url = `/content/${this.version}/CUI/${this.term}`
         const response = await getService(this.apikey, url, params)
         this.result = response.result
+        this.pageNumber = response.pageNumber
+        this.pageSize = response.pageSize
+        this.pageCount = response.pageCount
     } 
 
     getResult(): typeof ConceptModel {

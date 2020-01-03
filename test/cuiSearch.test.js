@@ -8,5 +8,6 @@ test('Get Results for a CUI', async () => {
     await search1.query()
     const result = search1.getResult()
     expect(result.ui).toBe(CUI)
+    expect(search1.pageCount).toBeGreaterThan(0)
 })
 

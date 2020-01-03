@@ -7,6 +7,7 @@ class UMLSQueryTemplate {
     result: any
     pageNumber: number
     pageSize: number
+    pageCount: number
     sabs: any
     ttys: any
     language: string
