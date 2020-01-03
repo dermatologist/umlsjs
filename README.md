@@ -41,6 +41,9 @@ const results = search1.getResults()
 
 ```
 
+## Functions
+nextPage()  |  nextPage(2)
+
 ## More to come
 
 * UMLSContent
