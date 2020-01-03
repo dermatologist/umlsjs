@@ -1,3 +1,5 @@
+import AtomModel from '../model/atom'
+
 class UMLSQueryTemplate {
     apikey: string
     term: string
@@ -13,18 +15,33 @@ class UMLSQueryTemplate {
     language: string
     includeObsolete: boolean
     includeSuppressible: boolean
+    atoms: Array<typeof AtomModel>
+    atom: typeof AtomModel
 
     constructor(apikey){
         this.apikey = apikey
         this.results = []
         this.version = 'current'
         this.pageNumber = 1
+        this.pageSize = 25
+        this.pageCount = 1
+        this.includeObsolete = false
+        this.includeSuppressible = false
     }
 
     async init(term, id=null) {
         this.term = term
         this.id = id
     } 
+
+    fillParams(params): any{
+        params.pageNumber = this.pageNumber
+        params.pageSize = this.pageSize
+        params.pageCount = this.pageCount
+        params.includeObsolete = this.includeObsolete
+        params.includeSuppressible = this.includeSuppressible
+        return params
+    }
 
     // @Override
     query() {

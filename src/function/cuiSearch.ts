@@ -7,7 +7,7 @@ class CUISearch extends UMLSQueryTemplate{
     result: typeof ConceptModel
 
     async query() {
-        const params: any = {}
+        const params = this.fillParams({})
         const url = `/content/${this.version}/CUI/${this.term}`
         const response = await getService(this.apikey, url, params)
         this.result = response.result
