@@ -12,6 +12,7 @@ class UMLSSearch extends UMLSQueryTemplate{
             params.searchType = 'exact'
         const url = `/search/${this.version}`
         params.string = this.term
+        params.pageNumber = this.pageNumber.toString()
         //console.log(this.apikey, url, params)
         const response = await getService(this.apikey, url, params)
         this.results = response.result.results

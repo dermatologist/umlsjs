@@ -18,9 +18,13 @@ import { UMLSSearch } from 'umlsjs'
 const search1 = new UMLSSearch(API_KEY)
 search1.init('Erythema Multiforme')
 // search1.init('Erythema Multiforme', true) for exact search
-// search1.init('Erythema Multiforme', false, 'current')
 await search1.query()
 const results = search1.getResults()
+
+search1.nextPage()
+await search1.query()
+const results = search1.getResults()
+
 
 ```
 

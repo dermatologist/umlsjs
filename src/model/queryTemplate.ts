@@ -17,17 +17,25 @@ class UMLSQueryTemplate {
     constructor(apikey){
         this.apikey = apikey
         this.results = []
+        this.version = 'current'
+        this.pageNumber = 1
     }
 
-    async init(term, id=null, version = 'current') {
+    async init(term, id=null) {
         this.term = term
         this.id = id
-        this.version = version
     } 
 
     // @Override
     query() {
 
+    }
+
+    nextPage(pageNumber=1){
+        if(this.pageNumber)
+            this.pageNumber = this.pageNumber + pageNumber
+        else
+            this.pageNumber = pageNumber
     }
 
     getResults(): Array<any> {
@@ -36,6 +44,10 @@ class UMLSQueryTemplate {
 
     getResult(): any {
         return this.result
+    }
+
+    setVersion(version: string){
+        this.version = version
     }
 
     setPageNumber(pageNumber: number){

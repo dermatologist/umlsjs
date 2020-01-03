@@ -10,6 +10,16 @@ test('Get Results for a term', async () => {
     expect(search1.pageNumber).toBe(1)
 })
 
+test('Get Next page for a term', async () => {
+    const search1 = new UMLSSearch(API_KEY)
+    search1.init('Renal failure')
+    search1.nextPage()
+    await search1.query()
+    const results = search1.getResults()
+    expect(results.length).toBeGreaterThan(1)
+    expect(search1.pageNumber).toBe(2)
+})
+
 test('Get Results for a two terms', async () => {
     const search1 = new UMLSSearch(API_KEY)
     search1.init('Erythema Multiforme')
