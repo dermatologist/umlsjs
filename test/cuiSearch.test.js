@@ -19,3 +19,12 @@ test('Get Atoms for a CUI', async () => {
     const result = search1.atoms
     expect(result.length).toBeGreaterThan(1)
 })
+
+test('Get Definitions for a CUI', async () => {
+    const search1 = new CUISearch(API_KEY)
+    const CUI = 'C0009044'
+    search1.init(CUI)
+    await search1.getDefinitions()
+    const result = search1.definitions
+    expect(result.length).toBeGreaterThan(0)
+})

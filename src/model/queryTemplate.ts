@@ -1,4 +1,5 @@
 import AtomModel from '../model/atom'
+import DefinitionModel from '../model/definition'
 
 class UMLSQueryTemplate {
     apikey: string
@@ -17,6 +18,8 @@ class UMLSQueryTemplate {
     includeSuppressible: boolean
     atoms: Array<typeof AtomModel>
     atom: typeof AtomModel
+    definitions: Array<typeof DefinitionModel>
+    definition: typeof DefinitionModel
 
     constructor(apikey){
         this.apikey = apikey
