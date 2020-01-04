@@ -10,18 +10,53 @@ npm install umlsjs --save
 ```
 
 ## Usage
+
+* Search
+
 ```
 import { UMLSSearch } from 'umlsjs'
-const search1 = new UMLSSearch(API_KEY, 'Erythema Multiforme')
+const search1 = new UMLSSearch(API_KEY)
+search1.init('Erythema Multiforme')
+// search1.init('Erythema Multiforme', true) for exact search
 await search1.query()
 const results = search1.getResults()
 
+search1.nextPage()
+await search1.query()
+const results = search1.getResults()
+
+
 ```
+
+* CUI
+
+```
+    import { CUISearch } from 'umlsjs'
+    const search1 = new CUISearch(API_KEY)
+    const CUI = 'C0009044'
+    search1.init(CUI)
+    await search1.query()
+    const result = search1.getResult()
+    console.log(result.name)
+
+    await search1.getAtoms()
+    const result = search1.atoms
+
+    await search1.getDefinitions()
+    const result = search1.definitions
+
+    await search1.getRelations()
+    const result = search1.relations
+
+```
+
+## Functions
+nextPage()  |  nextPage(2)
 
 ## More to come
 
 * UMLSContent
-* UMLSASubsets
+* UMLSSubsets
 * UMLSSemanticNetwork
 * UMLSContentView
 * UMLSCrosswalk
