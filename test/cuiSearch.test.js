@@ -11,3 +11,11 @@ test('Get Results for a CUI', async () => {
     expect(search1.pageCount).toBeGreaterThan(0)
 })
 
+test('Get Atoms for a CUI', async () => {
+    const search1 = new CUISearch(API_KEY)
+    const CUI = 'C0009044'
+    search1.init(CUI)
+    await search1.getAtoms()
+    const result = search1.atoms
+    expect(result.length).toBeGreaterThan(1)
+})

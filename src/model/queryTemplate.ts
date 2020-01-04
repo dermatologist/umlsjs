@@ -40,6 +40,10 @@ class UMLSQueryTemplate {
         params.pageCount = this.pageCount
         params.includeObsolete = this.includeObsolete
         params.includeSuppressible = this.includeSuppressible
+        if(this.ttys)
+            params.ttys = encodeURIComponent(this.ttys)
+        if(this.sabs)
+            params.sabs = encodeURIComponent(this.sabs)
         return params
     }
 

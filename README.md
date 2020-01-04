@@ -39,6 +39,9 @@ const results = search1.getResults()
     const result = search1.getResult()
     console.log(result.name)
 
+    await search1.getAtoms()
+    const result = search1.atoms
+
 ```
 
 ## Functions
