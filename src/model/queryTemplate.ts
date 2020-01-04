@@ -1,5 +1,6 @@
 import AtomModel from '../model/atom'
 import DefinitionModel from '../model/definition'
+import ConceptRelationModel from '../model/conceptrelation'
 
 class UMLSQueryTemplate {
     apikey: string
@@ -20,7 +21,9 @@ class UMLSQueryTemplate {
     atom: typeof AtomModel
     definitions: Array<typeof DefinitionModel>
     definition: typeof DefinitionModel
-
+    relations: Array<typeof ConceptRelationModel>
+    relation: typeof ConceptRelationModel
+    
     constructor(apikey){
         this.apikey = apikey
         this.results = []

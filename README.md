@@ -42,6 +42,12 @@ const results = search1.getResults()
     await search1.getAtoms()
     const result = search1.atoms
 
+    await search1.getDefinitions()
+    const result = search1.definitions
+
+    await search1.getRelations()
+    const result = search1.relations
+
 ```
 
 ## Functions
