@@ -13,7 +13,8 @@
     "preversion": "npm test",
     "version": "npm run build",
     "postversion": "rm -rf build/temp",
-    "release": "npm version patch && npm publish"
+    "release": "npm version patch && npm publish",
+    "gpr-setup": "node scripts/gpr.js"
   },
   "repository": {
     "type": "git",

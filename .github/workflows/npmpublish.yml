@@ -50,6 +50,7 @@ jobs:
           scope: '@dermatologist'
       - run: npm ci
       - run: npm build
+      - run: npm run gpr-setup
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
