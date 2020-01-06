@@ -31,6 +31,23 @@ const results = search1.getResults()
 * UMLSContentView
 * UMLSCrosswalk
 
+### Install the development version from GitHub as below
+
+Add the following to .npmrc
+
+```
+registry=https://registry.npmjs.org/
+@dermatologist:registry=https://npm.pkg.github.com
+
+```
+And
+
+```
+npm install @dermatologist/umlsjs --save
+
+```
+
+
 ## Want to join development?
 
 * Rename .env.example to .env and add your API key.
