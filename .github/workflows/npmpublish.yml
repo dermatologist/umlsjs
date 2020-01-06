@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - env:
+          UMLS_API_KEY: ${{secrets.umls_api_key}}
       - run: npm ci
       - run: npm test
 

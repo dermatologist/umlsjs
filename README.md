@@ -33,5 +33,5 @@ const results = search1.getResults()
 
 ## Want to join development?
 
-* Rename test/api.template.js to api.js and add your API key.
+* Rename .env.example to .env and add your API key.
 * Submit PR to the develop branch.

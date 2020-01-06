@@ -1,8 +1,12 @@
 import { UMLSSearch, CUISearch } from '../src/index'
-import API_KEY from './api'
+import dotenv from 'dotenv'
+
+beforeAll(() => {
+  dotenv.config()
+});
 
 test('Get Results for a term in index', async () => {
-    const search1 = new UMLSSearch(API_KEY)
+    const search1 = new UMLSSearch(process.env.UMLS_API_KEY)
     search1.init('Erythema Multiforme')
     await search1.query()
     const results = search1.getResults()
@@ -10,7 +14,7 @@ test('Get Results for a term in index', async () => {
 })
 
 test('Get Results for a CUI in index', async () => {
-    const search1 = new CUISearch(API_KEY)
+    const search1 = new CUISearch(process.env.UMLS_API_KEY)
     search1.init('C0009044')
     await search1.query()
     const result = search1.getResult()
