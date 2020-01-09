@@ -11,9 +11,8 @@
 
 1. [Fork the repo](http://help.github.com/fork-a-repo) and clone it to your local computer, and set up the upstream remote:
 
-        git clone git://github.com/YourGitHubUserName/umlsjs.git
-        git remote add upstream
-        https://github.com/dermatologist/umlsjs.git
+        git clone https://github.com/YourGithubUsername/umlsjs.git
+        git remote add upstream https://github.com/dermatologist/umlsjs.git
 
 2. Checkout out a new local branch based on your master and update it to the latest (TRUNK-123 is the branch name, You can name it whatever you want. Try to give it a meaningful name. If you are fixing an issue, please include the issue #).
 
