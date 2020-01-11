@@ -15,6 +15,4 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm test
-        env:
-          UMLS_API_KEY: ${{secrets.umls_api_key}}
+      - run: npm run build
