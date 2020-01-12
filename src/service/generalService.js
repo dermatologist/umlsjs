@@ -17,7 +17,7 @@ export const getService = async (apikey, url, params={}) => {
     url: fullUrl,
     params: params
   }
-  //const response = await axios(config)
-  const response = await axios.get(fullUrl, params)
+  const response = await axios(config)
+  //const response = await axios.get(fullUrl, params)
   return(response.data)
 }
