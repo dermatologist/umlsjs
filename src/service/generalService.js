@@ -17,7 +17,12 @@ export const getService = async (apikey, url, params={}) => {
     url: fullUrl,
     params: params
   }
+  /*
+  Only the first option works with UMLS. (Why?)
+  As a result, the mockaxios in the mock tests is different.
+  @See example in mock.generalService.spec.js
+  */
   const response = await axios(config)
-  //const response = await axios.get(fullUrl, params)
+  //const response = await axios.get(fullUrl, params, config)
   return(response.data)
 }

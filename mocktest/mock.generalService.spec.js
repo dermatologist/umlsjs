@@ -1,22 +1,10 @@
 import mockAxios from "axios";
 import { getService } from '../src/service/generalService'
-import { JsxEmit } from "typescript";
-
 
 jest.mock('axios') 
 
-it("fetches data from unsplash", async () => {
+it('Get Results for General service', async () => {
   // setup
-//   mockAxios.get.mockImplementationOnce(() =>
-//     Promise.resolve({
-//       data: { results: ["cat.jpg"] }
-//     })
-//   );
-//   mockAxios.post.mockImplementationOnce(() =>
-//     Promise.resolve({
-//       data: { results: ["cat.jpg"] }
-//     })
-//   );
 
     const fakeTgt = `
     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
@@ -31,6 +19,15 @@ it("fetches data from unsplash", async () => {
     `
 
     const fakeSt = 'ST-134-HUbXGfI765aSj0UqtdvU-cas'
+
+    const fakeRequest = {
+      method: 'get',
+      url: 'https://uts-ws.nlm.nih.gov/rest/search/current',
+      params: {
+        string: 'fracture of carpal bone',
+        ticket: 'ST-134-HUbXGfI765aSj0UqtdvU-cas'
+      }
+    }
 
     const fakeSearch = {
 
@@ -73,26 +70,39 @@ it("fetches data from unsplash", async () => {
   
   }
 
-  mockAxios.get.mockImplementation((url, params) => {
-    console.log(url, params)
-    switch (url) {
-      case 'https://uts-ws.nlm.nih.gov/rest/search/current':
-        return Promise.resolve({data: fakeSearch})
-      case '/items.json':
-        return Promise.resolve({data: [{id: 1}, {id: 2}]})
-      default:
-        return Promise.reject(new Error('not found'))
-    }
-  });
+
   mockAxios.post.mockImplementation((url) => {
-    console.log(url)
     switch (url) {
       case 'api-key':
         return Promise.resolve({data: fakeTgt})
-      case '/items.json':
-        return Promise.resolve({data: [{id: 1}, {id: 2}]})
-      default:
+      default: // Request for ST
         return Promise.resolve({data: fakeSt})
+    }
+  });
+
+  /*
+    @IMPORTANT:
+      UMLS API works only with direct axios(config) calls for get (Why?)
+      Hence the tests have to be altered as below
+  */
+    // mockAxios.get.mockImplementation((url, params) => {
+  //   console.log(url, params)
+  //   switch (url) {
+  //     case 'https://uts-ws.nlm.nih.gov/rest/search/current':
+  //       return Promise.resolve({data: fakeSearch})
+  //     case '/items.json':
+  //       return Promise.resolve({data: [{id: 1}, {id: 2}]})
+  //     default:
+  //       return Promise.reject(new Error('not found'))
+  //   }
+  // });
+
+  mockAxios.mockImplementation((request) => {
+    switch (request.url) {
+        case 'https://uts-ws.nlm.nih.gov/rest/search/current':
+          return Promise.resolve({data: fakeSearch})
+        default:
+        return Promise.resolve({data: {}})
     }
   });
 
@@ -102,17 +112,9 @@ it("fetches data from unsplash", async () => {
   }
   const data = await getService("test-key-random", '/search/current', params);
 
-  // expect
-  // expect(images).toEqual(["cat.jpg"]);
-  // expect(mockAxios.get).toHaveBeenCalledTimes(1);
-  // expect(mockAxios.get).toHaveBeenCalledWith(
-  //   "https://api.unsplash.com/search/photos",
-  //   {
-  //     params: {
-  //       client_id: process.env.REACT_APP_UNSPLASH_TOKEN,
-  //       query: "cats"
-  //     }
-  //   }
-  // );
-  console.log(data)
+  expect(data.pageNumber).toBe(1)
+  expect(data.result.classType).toBe('searchResults')
+  expect(mockAxios.post).toHaveBeenCalledTimes(2)
+  expect(mockAxios).toHaveBeenCalledTimes(1)
+  expect(mockAxios).toHaveBeenCalledWith(fakeRequest)
 });
