@@ -1,8 +1,12 @@
 import CUISearch from '../src/function/cuiSearch'
-import API_KEY from './api'
+import dotenv from 'dotenv'
+
+beforeAll(() => {
+  dotenv.config()
+});
 
 test('Get Results for a CUI', async () => {
-    const search1 = new CUISearch(API_KEY)
+    const search1 = new CUISearch(process.env.UMLS_API_KEY)
     const CUI = 'C0009044'
     search1.init(CUI)
     await search1.query()
@@ -12,7 +16,7 @@ test('Get Results for a CUI', async () => {
 })
 
 test('Get Atoms for a CUI', async () => {
-    const search1 = new CUISearch(API_KEY)
+    const search1 = new CUISearch(process.env.UMLS_API_KEY)
     const CUI = 'C0009044'
     search1.init(CUI)
     await search1.getAtoms()
@@ -21,7 +25,7 @@ test('Get Atoms for a CUI', async () => {
 })
 
 test('Get Definitions for a CUI', async () => {
-    const search1 = new CUISearch(API_KEY)
+    const search1 = new CUISearch(process.env.UMLS_API_KEY)
     const CUI = 'C0009044'
     search1.init(CUI)
     await search1.getDefinitions()
@@ -30,7 +34,7 @@ test('Get Definitions for a CUI', async () => {
 })
 
 test('Get Relations for a CUI', async () => {
-    const search1 = new CUISearch(API_KEY)
+    const search1 = new CUISearch(process.env.UMLS_API_KEY)
     const CUI = 'C0009044'
     search1.init(CUI)
     await search1.getRelations()
