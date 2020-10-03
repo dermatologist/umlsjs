@@ -1,6 +1,6 @@
 # How to contribute
 
-## Getting Started
+## Please note:
 
 * (Optional) We adopt [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). Most feature branches are pushed to the repository and deleted when merged to *develop* branch.
 * (**Important**): Submit pull requests to the *develop* branch or *feature/* branches
@@ -57,8 +57,6 @@
 8. Issue a Pull Request
 
   In order to make a pull request:
-
-  * Navigate to the repository you just pushed to (e.g. https://github.com/your-user-name/repository-name)
   * Click "Pull Request".
   * Choose the develop branch
   * Click 'Create pull request'

@@ -1,6 +1,6 @@
 {
   "name": "umlsjs",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Nodejs package to access UMLS REST web-services",
   "main": "dist/index.js",
   "files": [
@@ -10,6 +10,7 @@
     "build": "npx babel src --extensions \".ts,.js\" --out-dir dist",
     "start": "npx babel src --watch --out-dir dist",
     "test": "jest --detectOpenHandles",
+    "docs": "npx jsdoc src -r -d docs -R README.md",
     "preversion": "npm test",
     "version": "npm run build",
     "postversion": "rm -rf build/temp",
@@ -41,6 +42,7 @@
     "babel-jest": "^24.8.0",
     "dotenv": "^8.2.0",
     "jest": "^24.8.0",
+    "jsdoc": "^3.6.3",
     "typescript": "^3.7.4"
   },
   "author": "Bell Eapen",
