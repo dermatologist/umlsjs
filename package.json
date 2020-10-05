@@ -10,6 +10,7 @@
     "build": "npx babel src --extensions \".ts,.js\" --out-dir dist",
     "start": "npx babel src --watch --out-dir dist",
     "test": "jest --detectOpenHandles",
+    "mocktest": "jest --detectOpenHandles /mocktest",
     "docs": "npx jsdoc src -r -d docs -R README.md",
     "preversion": "npm test",
     "version": "npm run build",
