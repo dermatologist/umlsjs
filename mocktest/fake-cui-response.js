@@ -17,66 +17,6 @@ export const fakeCUIRelations = {
             "attributeCount": 0,
             "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0029509",
             "relatedIdName": "Unspecified site injury"
-        },
-        {
-            "classType": "ConceptRelation",
-            "ui": "R13333743",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": false,
-            "rootSource": "MTH",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0007285",
-            "relatedIdName": "Bone structure of carpus"
-        },
-        {
-            "classType": "ConceptRelation",
-            "ui": "R03033072",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": false,
-            "rootSource": "MTH",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0009353",
-            "relatedIdName": "Colles' Fracture"
-        },
-        {
-            "classType": "ConceptRelation",
-            "ui": "R18927471",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": false,
-            "rootSource": "MTH",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0159738",
-            "relatedIdName": "Closed fracture of lower end of radius AND ulna"
-        },
-        {
-            "classType": "ConceptRelation",
-            "ui": "R03164258",
-            "suppressible": false,
-            "sourceUi": "NONE",
-            "obsolete": false,
-            "sourceOriginated": false,
-            "rootSource": "MTH",
-            "relationLabel": "RO",
-            "additionalRelationLabel": "",
-            "groupId": "NONE",
-            "attributeCount": 0,
-            "relatedId": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0347757",
-            "relatedIdName": "Closed fracture dislocation of wrist"
         }
     ]
 }
@@ -122,58 +62,7 @@ export const fakeCUIAtoms = {
             "name": "MetaMap NLP View"
         }
         ]
-    }, {
-        "classType": "Atom",
-        "ui": "A2892933",
-        "suppressible": "false",
-        "obsolete": "false",
-        "rootSource": "SNOMEDCT_US",
-        "termType": "PT",
-        "code": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/111541001",
-        "concept": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0155502",
-        "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/111541001",
-        "sourceDescriptor": "NONE",
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A2892933/attributes",
-        "parents": "NONE",
-        "ancestors": null,
-        "children": "NONE",
-        "descendants": null,
-        "relations": "NONE",
-        "name": "Benign paroxysmal positional vertigo",
-        "language": "ENG",
-        "contentViewMemberships": [{
-            "memberUri": "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A2892933",
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
-            "name": "MetaMap NLP View"
-        }
-        ]
-    }, {
-        "classType": "Atom",
-        "ui": "A3101021",
-        "suppressible": "false",
-        "obsolete": "false",
-        "rootSource": "SNOMEDCT_US",
-        "termType": "PT",
-        "code": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/232285008",
-        "concept": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/CUI/C0155502",
-        "sourceConcept": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/source/SNOMEDCT_US/232285008",
-        "sourceDescriptor": "NONE",
-        "attributes": "https://uts-ws.nlm.nih.gov/rest/content/2016AA/AUI/A3101021/attributes",
-        "parents": "NONE",
-        "ancestors": null,
-        "children": "NONE",
-        "descendants": null,
-        "relations": "NONE",
-        "name": "Benign recurrent vertigo",
-        "language": "ENG",
-        "contentViewMemberships": [{
-            "memberUri": "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357/member/A3101021",
-            "uri": "https://uts-ws.nlm.nih.gov/rest/content-views/2016AA/CUI/C1700357",
-            "name": "MetaMap NLP View"
-        }
-        ]
-    }
-    ]
+    }]
 }
 
 export const fakeCUIResponse = {
@@ -195,22 +84,6 @@ export const fakeCUIResponse = {
                     "rootSource": "SNOMEDCT_US",
                     "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044",
                     "name": "Closed fracture carpal bone"
-
-                },
-                {
-
-                    "ui": "C0016644",
-                    "rootSource": "MTH",
-                    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0016644",
-                    "name": "Fracture of carpal bone"
-
-                },
-                {
-
-                    "ui": "C0159765",
-                    "rootSource": "MTH",
-                    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0159765",
-                    "name": "Open fracture of carpal bone, unspecified"
 
                 }]
     }

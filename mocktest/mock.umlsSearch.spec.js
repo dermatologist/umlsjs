@@ -36,7 +36,7 @@ test('Get Results for General service', async () => {
     await search1.query()
     const results = search1.getResults()
     expect(results[0]['name']).toBe('Closed fracture carpal bone')
-    expect(results.length).toBeGreaterThan(1)
+    expect(results.length).toBeGreaterThan(0)
     expect(search1.pageNumber).toBe(1)
 
 });

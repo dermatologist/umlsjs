@@ -27,22 +27,6 @@ export const fakeSearch = {
                     "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0009044",
                     "name": "Closed fracture carpal bone"
 
-                },
-                {
-
-                    "ui": "C0016644",
-                    "rootSource": "MTH",
-                    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0016644",
-                    "name": "Fracture of carpal bone"
-
-                },
-                {
-
-                    "ui": "C0159765",
-                    "rootSource": "MTH",
-                    "uri": "https://uts-ws.nlm.nih.gov/rest/content/2015AA/CUI/C0159765",
-                    "name": "Open fracture of carpal bone, unspecified"
-
                 }]
     }
 
