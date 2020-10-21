@@ -6,7 +6,7 @@ beforeAll(() => {
 });
 
 test('Get Results for a term in index', async () => {
-  const search1 = new UMLSJS.UMLSSearch(process.env.UMLS_API_KEY)
+  const search1 = new umlsjs.UMLSSearch(process.env.UMLS_API_KEY)
     search1.init('Erythema Multiforme')
     await search1.query()
     const results = search1.getResults()
