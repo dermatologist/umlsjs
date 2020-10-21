@@ -62,7 +62,7 @@ export const getTgt = async apikey => {
 
 
   const saveTgt = tgt => {
-    const currentTime = new Date().getTime();
+    const currentTime = new Date().getTime().toString();
     localStorage.setItem("tgt_time", currentTime);
     localStorage.setItem("tgt_value", tgt);
 
@@ -70,7 +70,7 @@ export const getTgt = async apikey => {
 
   const getTgtFromCache = () => {
     const expirationDuration = 1000 * 60 * 60 * 8; // 8 hours
-    const prevSaved = localStorage.getItem("tgt_time");
+    const prevSaved = parseInt(localStorage.getItem("tgt_time"));
     const currentTime = new Date().getTime();
 
     const prevSavedExpired = prevSaved !== undefined && currentTime - prevSaved > expirationDuration;
