@@ -6,4 +6,4 @@ const umlsjs = {
     CUISearch: CUISearch
 }
 
-export default UMLSJS;
+export default umlsjs;
