@@ -1,4 +1,4 @@
-import UMLSJS from '../src/index'
+import umlsjs from '../src/index'
 import dotenv from 'dotenv'
 
 beforeAll(() => {
