@@ -14,7 +14,7 @@ test('Get Results for a term in index', async () => {
 })
 
 test('Get Results for a CUI in index', async () => {
-  const search1 = new UMLSJS.CUISearch(process.env.UMLS_API_KEY)
+  const search1 = new umlsjs.CUISearch(process.env.UMLS_API_KEY)
     search1.init('C0009044')
     await search1.query()
     search1.getResult()
