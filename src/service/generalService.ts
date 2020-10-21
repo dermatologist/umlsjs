@@ -23,6 +23,6 @@ export const getService = async (apikey, url, params:any ={}) => {
   @See example in mock.generalService.spec.js
   */
   //const response = await axios(config)
-  const response = await axios.get(fullUrl, params)
+  const response = await axios.get(fullUrl, {params: params})
   return(response.data)
 }

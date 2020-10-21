@@ -19,9 +19,8 @@ mockAxios.post.mockImplementation((url) => {
     UMLS API works only with direct axios(config) calls for get (Why?)
     Hence the tests have to be altered as below
 */
-
-mockAxios.get.mockImplementation((request:any) => {
-    switch (request.url) {
+mockAxios.get.mockImplementation((request:string) => {
+    switch (request) {
         case 'https://uts-ws.nlm.nih.gov/rest/search/current':
             if (request['params']['string'] === 'fracture of carpal bone')
                 return Promise.resolve({ data: fakeSearch })

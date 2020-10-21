@@ -20,8 +20,8 @@ mockAxios.post.mockImplementation((url) => {
     Hence the tests have to be altered as below
 */
 
-mockAxios.get.mockImplementation((request: any) => {
-    switch (request.url) {
+mockAxios.get.mockImplementation((request: string) => {
+    switch (request) {
         case 'https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044':
             return Promise.resolve({ data: fakeCUIResponse })
         case 'https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044/atoms':

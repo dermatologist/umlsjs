@@ -21,8 +21,8 @@ it('Get Results for General service', async () => {
       Hence the tests have to be altered as below
   */
 
-  mockAxios.get.mockImplementation((request:any) => {
-    switch (request.url) {
+  mockAxios.get.mockImplementation((request:string) => {
+    switch (request) {
         case 'https://uts-ws.nlm.nih.gov/rest/search/current':
           return Promise.resolve({data: fakeSearch})
         default:
@@ -39,6 +39,6 @@ it('Get Results for General service', async () => {
   expect(data.pageNumber).toBe(1)
   expect(data.result.classType).toBe('searchResults')
   expect(mockAxios.post).toHaveBeenCalledTimes(2)
-  expect(mockAxios).toHaveBeenCalledTimes(1)
-  expect(mockAxios).toHaveBeenCalledWith(fakeSearchRequest)
+  expect(mockAxios.get).toHaveBeenCalledTimes(1)
+  expect(mockAxios.get).toHaveBeenCalledWith(fakeSearchRequest)
 });
