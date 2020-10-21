@@ -1,8 +1,9 @@
-import mockAxios from "axios";
+import axios from "axios";
 import CUISearch from '../src/function/cuiSearch'
 import { fakeTgt, fakeSt } from './fake-key-response'
 import { fakeCUIResponse, fakeCUIAtoms, fakeCUIDefinitions, fakeCUIRelations } from './fake-cui-response'
 jest.mock('axios')
+const mockAxios = axios as jest.Mocked<typeof axios>;
 
 mockAxios.post.mockImplementation((url) => {
     switch (url) {
@@ -19,8 +20,9 @@ mockAxios.post.mockImplementation((url) => {
     Hence the tests have to be altered as below
 */
 
-mockAxios.mockImplementation((request) => {
-    switch (request.url) {
+mockAxios.get.mockImplementation((request: string, params: any) => {
+    console.log(params)
+    switch (request) {
         case 'https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044':
             return Promise.resolve({ data: fakeCUIResponse })
         case 'https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0009044/atoms':
@@ -34,6 +36,7 @@ mockAxios.mockImplementation((request) => {
             return Promise.resolve({ data: {} })
     }
 });
+
 test('Get Results for a CUI', async () => {
     const search1 = new CUISearch(process.env.UMLS_API_KEY || "test-random-key")
     const CUI = 'C0009044'
@@ -50,7 +53,9 @@ test('Get Atoms for a CUI', async () => {
     search1.init(CUI)
     await search1.getAtoms()
     const result = search1.atoms
-    expect(result.length).toBeGreaterThan(0)
+    expect(result).toBeTruthy()
+    if(result)
+        expect(result.length).toBeGreaterThan(0)
 })
 
 test('Get Definitions for a CUI', async () => {
@@ -59,7 +64,9 @@ test('Get Definitions for a CUI', async () => {
     search1.init(CUI)
     await search1.getDefinitions()
     const result = search1.definitions
-    expect(result.length).toBeGreaterThan(0)
+    expect(result).toBeTruthy()
+    if (result)
+        expect(result.length).toBeGreaterThan(0)
 })
 
 test('Get Relations for a CUI', async () => {
@@ -68,5 +75,7 @@ test('Get Relations for a CUI', async () => {
     search1.init(CUI)
     await search1.getRelations()
     const result = search1.relations
-    expect(result.length).toBeGreaterThan(0)
+    expect(result).toBeTruthy()
+    if (result)
+        expect(result.length).toBeGreaterThan(0)
 })

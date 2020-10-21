@@ -1,10 +1,16 @@
-import AtomModel from '../model/atom'
-import DefinitionModel from '../model/definition'
-import ConceptRelationModel from '../model/conceptrelation'
+/**
+ * Copyright (c) 2020 Bell Eapen
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+import AtomModel from './atom'
+import DefinitionModel from './definition'
+import ConceptRelationModel from './conceptrelation'
 
 class UMLSQueryTemplate {
     apikey: string
-    term: string
+    term?: string
     id: any
     version: string
     results: Array<any>
@@ -14,16 +20,16 @@ class UMLSQueryTemplate {
     pageCount: number
     sabs: any
     ttys: any
-    language: string
+    language?: string
     includeObsolete: boolean
     includeSuppressible: boolean
-    atoms: Array<typeof AtomModel>
-    atom: typeof AtomModel
-    definitions: Array<typeof DefinitionModel>
-    definition: typeof DefinitionModel
-    relations: Array<typeof ConceptRelationModel>
-    relation: typeof ConceptRelationModel
-    
+    atoms?: Array<typeof AtomModel>
+    atom?: typeof AtomModel
+    definitions?: Array<typeof DefinitionModel>
+    definition?: typeof DefinitionModel
+    relations?: Array<typeof ConceptRelationModel>
+    relation?: typeof ConceptRelationModel
+
     constructor(apikey){
         this.apikey = apikey
         this.results = []
@@ -38,7 +44,7 @@ class UMLSQueryTemplate {
     async init(term, id=null) {
         this.term = term
         this.id = id
-    } 
+    }
 
     fillParams(params): any{
         params.pageNumber = this.pageNumber
@@ -80,7 +86,7 @@ class UMLSQueryTemplate {
     setPageNumber(pageNumber: number){
         this.pageNumber = pageNumber
     }
-    
+
     setPageSize(pageSize: number){
         this.pageSize = pageSize
     }
@@ -104,7 +110,7 @@ class UMLSQueryTemplate {
     SetTtys(ttys: any){
         this.ttys = ttys
     }
-    
+
 }
 
 export default UMLSQueryTemplate;

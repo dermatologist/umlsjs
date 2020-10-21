@@ -1,0 +1,17 @@
+{
+    "licenser.license": "MIT",
+    "licenser.author": "Bell Eapen",
+    "licenser.projectName": "umlsjs",
+    "licenser.useSingleLineStyle": false,
+    "cSpell.words": [
+        "apikey",
+        "esnext",
+        "mocktest",
+        "postversion",
+        "preversion",
+        "tsdx",
+        "tslib",
+        "umls",
+        "umlsjs"
+    ]
+}
