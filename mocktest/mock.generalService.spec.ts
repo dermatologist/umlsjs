@@ -1,8 +1,9 @@
-import mockAxios from "axios";
+import axios from "axios";
 import { getService } from '../src/service/generalService'
 import {fakeTgt, fakeSt} from './fake-key-response'
 import { fakeSearch, fakeSearchRequest} from './fake-search-response'
-jest.mock('axios') 
+jest.mock('axios')
+const mockAxios = axios as jest.Mocked<typeof axios>;
 
 it('Get Results for General service', async () => {
   mockAxios.post.mockImplementation((url) => {
@@ -20,7 +21,7 @@ it('Get Results for General service', async () => {
       Hence the tests have to be altered as below
   */
 
-  mockAxios.mockImplementation((request) => {
+  mockAxios.get.mockImplementation((request:any) => {
     switch (request.url) {
         case 'https://uts-ws.nlm.nih.gov/rest/search/current':
           return Promise.resolve({data: fakeSearch})

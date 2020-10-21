@@ -1,8 +1,9 @@
-import mockAxios from "axios";
+import axios from "axios";
 import UMLSSearch from '../src/function/umlsSearch'
 import { fakeTgt, fakeSt } from './fake-key-response'
 import { fakeSearch } from './fake-search-response'
 jest.mock('axios')
+const mockAxios = axios as jest.Mocked<typeof axios>;
 
 mockAxios.post.mockImplementation((url) => {
     switch (url) {
@@ -19,7 +20,7 @@ mockAxios.post.mockImplementation((url) => {
     Hence the tests have to be altered as below
 */
 
-mockAxios.mockImplementation((request) => {
+mockAxios.get.mockImplementation((request:any) => {
     switch (request.url) {
         case 'https://uts-ws.nlm.nih.gov/rest/search/current':
             if (request['params']['string'] === 'fracture of carpal bone')
