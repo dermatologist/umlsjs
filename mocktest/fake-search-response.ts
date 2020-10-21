@@ -1,12 +1,3 @@
-export const fakeSearchRequest = {
-    method: 'get',
-    url: 'https://uts-ws.nlm.nih.gov/rest/search/current',
-    params: {
-        string: 'fracture of carpal bone',
-        ticket: 'ST-134-HUbXGfI765aSj0UqtdvU-cas'
-    }
-}
-
 export const fakeSearch = {
 
     "pageSize": 25,

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getService } from '../src/service/generalService'
 import {fakeTgt, fakeSt} from './fake-key-response'
-import { fakeSearch, fakeSearchRequest} from './fake-search-response'
+import { fakeSearch } from './fake-search-response'
 jest.mock('axios')
 const mockAxios = axios as jest.Mocked<typeof axios>;
 
@@ -15,12 +15,6 @@ it('Get Results for General service', async () => {
     }
   });
 
-  /*
-    @IMPORTANT:
-      UMLS API works only with direct axios(config) calls for get (Why?)
-      Hence the tests have to be altered as below
-  */
-
   mockAxios.get.mockImplementation((request:string) => {
     switch (request) {
         case 'https://uts-ws.nlm.nih.gov/rest/search/current':
@@ -30,7 +24,6 @@ it('Get Results for General service', async () => {
     }
   });
 
-  // work
   const params = {
     string: 'fracture of carpal bone'
   }
@@ -40,5 +33,6 @@ it('Get Results for General service', async () => {
   expect(data.result.classType).toBe('searchResults')
   expect(mockAxios.post).toHaveBeenCalledTimes(2)
   expect(mockAxios.get).toHaveBeenCalledTimes(1)
-  expect(mockAxios.get).toHaveBeenCalledWith(fakeSearchRequest)
+  expect(mockAxios.get).toHaveBeenCalledWith("https://uts-ws.nlm.nih.gov/rest/search/current",
+  { "params": { "string": "fracture of carpal bone", "ticket": "ST-134-HUbXGfI765aSj0UqtdvU-cas" } })
 });
