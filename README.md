@@ -14,11 +14,17 @@ npm install umlsjs --save
 * Search
 
 ```
-import { UMLSSearch } from 'umlsjs'
-const search1 = new UMLSSearch(API_KEY)
+import UMLSJS from 'umlsjs'
+
+const search1 = new UMLSJS.UMLSSearch(API_KEY)
 search1.init('Erythema Multiforme')
 await search1.query()
 const results = search1.getResults()
+
+const search1 = new UMLSJS.CUISearch(process.env.UMLS_API_KEY)
+search1.init('C0009044')
+await search1.query()
+const result = search1.getResult()
 ```
 
 ## Refer [wiki](https://github.com/dermatologist/umlsjs/wiki/Instructions) for more instructions
