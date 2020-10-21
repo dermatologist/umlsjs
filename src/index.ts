@@ -5,3 +5,4 @@ module.exports = {
     UMLSSearch: UMLSSearch,
     CUISearch: CUISearch
 }
+
