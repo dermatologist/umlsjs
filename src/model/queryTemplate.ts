@@ -14,7 +14,7 @@ class UMLSQueryTemplate {
     pageCount: number
     sabs: any
     ttys: any
-    language!: string
+    language?: string
     includeObsolete: boolean
     includeSuppressible: boolean
     atoms?: Array<typeof AtomModel>
