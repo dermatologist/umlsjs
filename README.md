@@ -34,6 +34,13 @@ await search2.getRelations()
 const result = search2.relations
 ```
 
+### pagination
+
+```
+nextPage()
+nextPage(2)
+```
+
 ## More to come
 
 * UMLSContent
