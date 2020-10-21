@@ -7,16 +7,14 @@
     "dist/*"
   ],
   "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
     "mocktest": "tsdx test --detectOpenHandles /mocktest",
-
-        "start": "tsdx watch",
-        "build": "tsdx build",
-        "test": "tsdx test",
-        "lint": "tsdx lint --fix",
-        "prepare": "tsdx build",
-        "size": "size-limit",
-        "analyze": "size-limit --why",
-
+    "lint": "tsdx lint --fix",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
     "docs": "npx jsdoc src -r -d docs -R README.md",
     "preversion": "npm test",
     "version": "npm run build",
