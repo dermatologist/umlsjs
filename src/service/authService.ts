@@ -1,7 +1,5 @@
 import axios from 'axios';
 import querystring from 'querystring';
-// This is required
-import regeneratorRuntime from "regenerator-runtime";
 import parser from 'fast-xml-parser'
 import he from 'he'
 
@@ -36,8 +34,8 @@ export const getTgt = async apikey => {
       localeRange: "", //To support non english character in tag/attribute values.
       parseTrueNumberOnly: false,
       arrayMode: false, //"strict"
-      attrValueProcessor: (val, attrName) => he.decode(val, {isAttributeValue: true}),//default is a=>a
-      tagValueProcessor : (val, tagName) => he.decode(val), //default is a=>a
+      attrValueProcessor: (val) => he.decode(val, {isAttributeValue: true}),//default is a=>a
+      tagValueProcessor : (val) => he.decode(val), //default is a=>a
       stopNodes: ["parse-me-as-string"]
       };
       const config = {
@@ -62,7 +60,7 @@ export const getTgt = async apikey => {
 
 
   const saveTgt = tgt => {
-    const currentTime = new Date().getTime();
+    const currentTime = new Date().getTime().toString();
     localStorage.setItem("tgt_time", currentTime);
     localStorage.setItem("tgt_value", tgt);
 
@@ -70,7 +68,7 @@ export const getTgt = async apikey => {
 
   const getTgtFromCache = () => {
     const expirationDuration = 1000 * 60 * 60 * 8; // 8 hours
-    const prevSaved = localStorage.getItem("tgt_time");
+    const prevSaved  = parseInt(localStorage.getItem("tgt_time") || '0');
     const currentTime = new Date().getTime();
 
     const prevSavedExpired = prevSaved !== undefined && currentTime - prevSaved > expirationDuration;

@@ -4,7 +4,6 @@ import SearchModel from '../model/search'
 import UMLSQueryTemplate from '../model/queryTemplate'
 
 class UMLSSearch extends UMLSQueryTemplate{
-    results: Array<typeof SearchModel>
 
     async query() {
         //const params: any = {}
@@ -17,7 +16,7 @@ class UMLSSearch extends UMLSQueryTemplate{
         //console.log(this.apikey, url, params)
         const response = await getService(this.apikey, url, params)
         this.results = response.result.results
-    } 
+    }
 
     getResults(): Array<typeof SearchModel> {
         return this.results

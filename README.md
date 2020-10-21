@@ -1,7 +1,7 @@
 # umlsjs (For UMLS REST APIs)
 
 ## About
-This is an unofficial package for accessing [UMLS REST APIs](https://documentation.uts.nlm.nih.gov/rest/home.html). The technical documentation for the APIs is available [here.](https://documentation.uts.nlm.nih.gov/) You need an API-KEY to access UMLS services. You can apply for the license [here.](https://uts.nlm.nih.gov/license.html) This is still in early alpha and is not production ready. Please star the [GitHub repo](https://github.com/dermatologist/umlsjs) to show your interest in this project or [contact me](https://nuchange.ca/contact).
+This is an unofficial package for accessing [UMLS REST APIs](https://documentation.uts.nlm.nih.gov/rest/home.html). The technical documentation for the APIs is available [here.](https://documentation.uts.nlm.nih.gov/) You need an API-KEY to access UMLS services. You can apply for the license [here.](https://uts.nlm.nih.gov/license.html)
 
 ## Install
 ```
@@ -11,17 +11,35 @@ npm install umlsjs --save
 
 ## Usage
 
-* Search
-
 ```
-import { UMLSSearch } from 'umlsjs'
-const search1 = new UMLSSearch(API_KEY)
+import umlsjs from 'umlsjs'
+
+const search1 = new umlsjs.UMLSSearch(API_KEY)
 search1.init('Erythema Multiforme')
 await search1.query()
 const results = search1.getResults()
+
+const search2 = new umlsjs.CUISearch(process.env.UMLS_API_KEY)
+search2.init('C0009044')
+await search2.query()
+const result = search2.getResult()
+
+await search2.getAtoms()
+const result = search2.atoms
+
+await search2.getDefinitions()
+const result = search2.definitions
+
+await search2.getRelations()
+const result = search2.relations
 ```
 
-## Refer [wiki](https://github.com/dermatologist/umlsjs/wiki/Instructions) for more instructions
+### pagination
+
+```
+nextPage()
+nextPage(2)
+```
 
 ## More to come
 
@@ -31,24 +49,11 @@ const results = search1.getResults()
 * UMLSContentView
 * UMLSCrosswalk
 
-### Install the development version from GitHub as below
-
-Add the following to .npmrc
-
-```
-registry=https://registry.npmjs.org/
-@dermatologist:registry=https://npm.pkg.github.com
-
-```
-And
-
-```
-npm install @dermatologist/umlsjs --save
-
-```
-
-
 ## Want to join development?
 
 * Rename .env.example to .env and add your API key.
 * Submit PR to the develop branch.
+
+## Contributor(s)
+
+* [Bell Eapen](https://nuchange.ca)

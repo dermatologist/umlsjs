@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Integration Tests
 
 on: 
   push:
@@ -8,9 +8,8 @@ on:
 #     branches:
 #       - master
 #       - develop
-# on:
-#   release:
-#     types: [created]
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -38,19 +37,19 @@ jobs:
   #       env:
   #         NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: '@dermatologist'
-      - run: npm ci
-      - run: npm build
-      - run: npm run gpr-setup
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  # publish-gpr:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12
+  #         registry-url: https://npm.pkg.github.com/
+  #         scope: '@dermatologist'
+  #     - run: npm ci
+  #     - run: npm build
+  #     - run: npm run gpr-setup
+  #     - run: npm publish
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

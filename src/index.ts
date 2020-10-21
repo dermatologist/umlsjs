@@ -1,7 +1,9 @@
 import UMLSSearch from './function/umlsSearch'
 import CUISearch from './function/cuiSearch'
 
-module.exports = {
+const umlsjs = {
     UMLSSearch: UMLSSearch,
     CUISearch: CUISearch
 }
+
+export default umlsjs;
