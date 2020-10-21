@@ -43,7 +43,7 @@ test('Get Results for a two terms', async () => {
 
 test('Get Results for exact term', async () => {
     const search1 = new UMLSSearch(process.env.UMLS_API_KEY)
-    search1.init('fjhfsdfjlkdhgfjhb', true)
+    search1.init('fjhfsdfjlkdhgfjhb')
     await search1.query()
     const results = search1.getResults()
     expect(results).toBeTruthy()
