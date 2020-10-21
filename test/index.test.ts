@@ -17,6 +17,6 @@ test('Get Results for a CUI in index', async () => {
   const search1 = new UMLSJS.CUISearch(process.env.UMLS_API_KEY)
     search1.init('C0009044')
     await search1.query()
-    const result = search1.getResult()
+    search1.getResult()
     expect(search1.pageCount).toBeGreaterThan(0)
 })

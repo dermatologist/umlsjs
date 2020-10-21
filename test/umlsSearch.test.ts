@@ -46,5 +46,7 @@ test('Get Results for exact term', async () => {
     search1.init('fjhfsdfjlkdhgfjhb', true)
     await search1.query()
     const results = search1.getResults()
-    expect(results.length).toBeLessThan(2)
+    expect(results).toBeTruthy()
+    if (results)
+        expect(results.length).toBeLessThan(2)
 })
