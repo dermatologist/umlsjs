@@ -1,5 +1,9 @@
 # umlsjs (For UMLS REST APIs)
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://github.com/dermatologist/fhir-questionnaire-render-react)
+[![npm](https://img.shields.io/npm/dt/umlsjs)](https://www.npmjs.com/package/umlsjs)
+[![Build](https://github.com/dermatologist/umlsjs/workflows/Publish/badge.svg)](https://nuchange.ca)
+
 ## About
 This is an unofficial package for accessing [UMLS REST APIs](https://documentation.uts.nlm.nih.gov/rest/home.html). The technical documentation for the APIs is available [here.](https://documentation.uts.nlm.nih.gov/) You need an API-KEY to access UMLS services. You can apply for the license [here.](https://uts.nlm.nih.gov/license.html)
 
