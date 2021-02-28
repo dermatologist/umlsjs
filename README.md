@@ -60,4 +60,4 @@ nextPage(2)
 
 ## Contributor(s)
 
-* [Bell Eapen](https://nuchange.ca)
+* [Bell Eapen](https://nuchange.ca) | [![Twitter Follow](https://img.shields.io/twitter/follow/beapen?style=social)](https://twitter.com/beapen)
