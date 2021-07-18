@@ -2,6 +2,7 @@ import axios from 'axios';
 import querystring from 'querystring';
 import parser from 'fast-xml-parser'
 import he from 'he'
+import { LocalStorage } from "node-localstorage"
 
 export const getSt = async apikey => {
   const tgt = await getTgt(apikey)
@@ -60,6 +61,9 @@ export const getTgt = async apikey => {
 
 
   const saveTgt = tgt => {
+    if (typeof localStorage === "undefined" || localStorage === null) {
+      localStorage = new LocalStorage('./scratch');
+    }
     const currentTime = new Date().getTime().toString();
     localStorage.setItem("tgt_time", currentTime);
     localStorage.setItem("tgt_value", tgt);
@@ -67,6 +71,9 @@ export const getTgt = async apikey => {
   }
 
   const getTgtFromCache = () => {
+    if (typeof localStorage === "undefined" || localStorage === null) {
+      localStorage = new LocalStorage('./scratch');
+    }
     const expirationDuration = 1000 * 60 * 60 * 8; // 8 hours
     const prevSaved  = parseInt(localStorage.getItem("tgt_time") || '0');
     const currentTime = new Date().getTime();
