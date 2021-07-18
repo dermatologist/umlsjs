@@ -6,7 +6,10 @@ beforeAll(() => {
 });
 
 test('Get Results for a term in index', async () => {
-  const search1 = new UMLSJS.UMLSSearch(process.env.UMLS_API_KEY)
+  const key = process.env.UMLS_API_KEY || "";
+  const ticket = new UMLSJS.UMLSToken(key)
+  const st = await ticket.getSt()
+    const search1 = new UMLSJS.UMLSSearch(st)
     search1.init('Erythema Multiforme')
     await search1.query()
     const results = search1.getResults()
@@ -14,7 +17,11 @@ test('Get Results for a term in index', async () => {
 })
 
 test('Get Results for a CUI in index', async () => {
-  const search1 = new UMLSJS.CUISearch(process.env.UMLS_API_KEY)
+
+    const key = process.env.UMLS_API_KEY || "";
+  const ticket = new UMLSJS.UMLSToken(key)
+    const st = await ticket.getSt()
+    const search1 = new UMLSJS.CUISearch(st)
     search1.init('C0009044')
     await search1.query()
     search1.getResult()

@@ -12,7 +12,7 @@ test('Get TGT with API-key', async () => {
 })
 
 test('Get ST with API-key', async () => {
-
-    const st = await getSt(process.env.UMLS_API_KEY);
+    const tgt = await getTgt(process.env.UMLS_API_KEY);
+    const st = await getSt(tgt);
     expect(st.substring(0,2)).toBe('ST')
 })

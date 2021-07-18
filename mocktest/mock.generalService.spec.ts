@@ -31,8 +31,8 @@ it('Get Results for General service', async () => {
 
   expect(data.pageNumber).toBe(1)
   expect(data.result.classType).toBe('searchResults')
-  expect(mockAxios.post).toHaveBeenCalledTimes(2)
+  // expect(mockAxios.post).toHaveBeenCalledTimes(2)
   expect(mockAxios.get).toHaveBeenCalledTimes(1)
   expect(mockAxios.get).toHaveBeenCalledWith("https://uts-ws.nlm.nih.gov/rest/search/current",
-  { "params": { "string": "fracture of carpal bone", "ticket": "ST-134-HUbXGfI765aSj0UqtdvU-cas" } })
+    { "params": { "string": "fracture of carpal bone", "ticket": "test-key-random" } })
 });
