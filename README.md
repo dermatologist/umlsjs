@@ -38,6 +38,12 @@ await search2.getRelations()
 const result = search2.relations
 ```
 
+
+```
+const umlsjs = require('umlsjs)
+const search1 = new umlsjs.UMLSJS.UMLSSearch(API_KEY)
+```
+
 ### pagination
 
 ```
