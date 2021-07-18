@@ -4,3 +4,4 @@ dist
 test/api.js
 .idea
 .env
+scratch
