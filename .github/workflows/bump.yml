@@ -34,11 +34,13 @@ jobs:
         uses: "actions/setup-node@v2.2.0"
         with:
           node-version: 12
+      - run: npm install
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
         with:
           tag-prefix: 'pre-'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UMLS_API_KEY: ${{secrets.umls_api_key}}
       - name: "cat package.json"
         run: cat ./package.json
