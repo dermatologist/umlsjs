@@ -2,10 +2,8 @@ import axios from 'axios';
 import querystring from 'querystring';
 import parser from 'fast-xml-parser'
 import he from 'he'
-import { LocalStorage } from "node-localstorage"
 
-export const getSt = async apikey => {
-  const tgt = await getTgt(apikey)
+export const getSt = async tgt => {
   const config = {
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -17,9 +15,6 @@ export const getSt = async apikey => {
 }
 
 export const getTgt = async apikey => {
-  if(getTgtFromCache())
-    return getTgtFromCache()
-  else{
     const options = {
       attributeNamePrefix : "U_",
       attrNodeName: "attr", //default is 'false'
@@ -54,34 +49,9 @@ export const getTgt = async apikey => {
       const urlWithTgt = jsonObj.html.body.form.attr.U_action
       const url = config.baseURL+apiFunction+'/'
       const tgt = urlWithTgt.replace(url, '')
-      saveTgt(tgt)
       return(tgt)
-    }
+
   };
 
 
-  const saveTgt = tgt => {
-    if (typeof localStorage === "undefined" || localStorage === null) {
-      localStorage = new LocalStorage('./scratch');
-    }
-    const currentTime = new Date().getTime().toString();
-    localStorage.setItem("tgt_time", currentTime);
-    localStorage.setItem("tgt_value", tgt);
 
-  }
-
-  const getTgtFromCache = () => {
-    if (typeof localStorage === "undefined" || localStorage === null) {
-      localStorage = new LocalStorage('./scratch');
-    }
-    const expirationDuration = 1000 * 60 * 60 * 8; // 8 hours
-    const prevSaved  = parseInt(localStorage.getItem("tgt_time") || '0');
-    const currentTime = new Date().getTime();
-
-    const prevSavedExpired = prevSaved !== undefined && currentTime - prevSaved > expirationDuration;
-
-    if (prevSaved || !prevSavedExpired) {
-      return localStorage.getItem("tgt_value");
-    }
-    return null
-  }

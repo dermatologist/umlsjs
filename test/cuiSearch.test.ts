@@ -1,4 +1,6 @@
 import CUISearch from '../src/function/cuiSearch'
+import UMLSToken from '../src/model/umlsToken'
+
 import dotenv from 'dotenv'
 
 beforeAll(() => {
@@ -6,7 +8,10 @@ beforeAll(() => {
 });
 
 test('Get Results for a CUI', async () => {
-    const search1 = new CUISearch(process.env.UMLS_API_KEY)
+    const key = process.env.UMLS_API_KEY || "";
+    const ticket = new UMLSToken(key)
+    const st = await ticket.getSt()
+    const search1 = new CUISearch(st)
     const CUI = 'C0009044'
     search1.init(CUI)
     await search1.query()
@@ -16,7 +21,10 @@ test('Get Results for a CUI', async () => {
 })
 
 test('Get Atoms for a CUI', async () => {
-    const search1 = new CUISearch(process.env.UMLS_API_KEY)
+    const key = process.env.UMLS_API_KEY || "";
+    const ticket = new UMLSToken(key)
+    const st = await ticket.getSt()
+    const search1 = new CUISearch(st)
     const CUI = 'C0009044'
     search1.init(CUI)
     await search1.getAtoms()
