@@ -9,7 +9,7 @@ import DefinitionModel from './definition'
 import ConceptRelationModel from './conceptrelation'
 
 class UMLSQueryTemplate {
-    apikey: string
+    st: string
     term?: string
     id: any
     version: string
@@ -30,8 +30,8 @@ class UMLSQueryTemplate {
     relations?: Array<typeof ConceptRelationModel>
     relation?: typeof ConceptRelationModel
 
-    constructor(apikey){
-        this.apikey = apikey
+    constructor(st){
+        this.st = st
         this.results = []
         this.version = 'current'
         this.pageNumber = 1

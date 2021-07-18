@@ -1,0 +1,6 @@
+{
+    "plugins": ["jsdoc-plugin-typescript"],
+    "typescript": {
+        "moduleRoot": "src"
+    }
+}

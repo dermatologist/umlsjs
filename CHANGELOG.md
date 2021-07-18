@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/dermatologist/umlsjs/tree/HEAD)
+## [0.4.0](https://github.com/dermatologist/umlsjs/tree/0.4.0) (2021-07-18)
 
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.3.2...HEAD)
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.3.2...0.4.0)
 
 **Closed issues:**
 

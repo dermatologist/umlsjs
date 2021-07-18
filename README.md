@@ -17,13 +17,20 @@ npm install umlsjs --save
 
 ```
 import {UMLSJS} from 'umlsjs'
+// Create Once
+const umls_key = "YOUR_KEY_HERE" ;
+const token = new UMLSJS.UMLSToken(umls_key)
 
-const search1 = new UMLSJS.UMLSSearch(API_KEY)
+// Generate with each request
+let st = await token.getSt()
+const search1 = new UMLSJS.UMLSSearch(st)
 search1.init('Erythema Multiforme')
 await search1.query()
 const results = search1.getResults()
 
-const search2 = new UMLSJS.CUISearch(process.env.UMLS_API_KEY)
+// Generate with each request
+st = await token.getSt()
+const search2 = new UMLSJS.CUISearch(st)
 search2.init('C0009044')
 await search2.query()
 const result = search2.getResult()
@@ -36,6 +43,19 @@ const result = search2.definitions
 
 await search2.getRelations()
 const result = search2.relations
+```
+
+
+```
+const umlsjs = require('umlsjs)
+
+// Create Once
+const umls_key = "YOUR_KEY_HERE" ;
+const token = new umlsjs.UMLSJS.UMLSToken(umls_key)
+
+// Generate with each request
+let st = await token.getSt()
+const search1 = new umlsjs.UMLSJS.UMLSSearch(st)
 ```
 
 ### pagination
