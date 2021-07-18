@@ -35,12 +35,21 @@ search2.init('C0009044')
 await search2.query()
 const result = search2.getResult()
 
+st = await token.getSt()
+const search2 = new UMLSJS.CUISearch(st)
+search2.init('C0009044')
 await search2.getAtoms()
 const result = search2.atoms
 
+st = await token.getSt()
+const search2 = new UMLSJS.CUISearch(st)
+search2.init('C0009044')
 await search2.getDefinitions()
 const result = search2.definitions
 
+st = await token.getSt()
+const search2 = new UMLSJS.CUISearch(st)
+search2.init('C0009044')
 await search2.getRelations()
 const result = search2.relations
 ```
