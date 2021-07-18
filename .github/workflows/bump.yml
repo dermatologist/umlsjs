@@ -41,5 +41,6 @@ jobs:
           tag-prefix: 'pre-'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UMLS_API_KEY: ${{secrets.umls_api_key}}
       - name: "cat package.json"
         run: cat ./package.json
