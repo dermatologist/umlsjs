@@ -16,14 +16,14 @@ npm install umlsjs --save
 ## Usage
 
 ```
-import umlsjs from 'umlsjs'
+import {UMLSJS} from 'umlsjs'
 
-const search1 = new umlsjs.UMLSSearch(API_KEY)
+const search1 = new UMLSJS.UMLSSearch(API_KEY)
 search1.init('Erythema Multiforme')
 await search1.query()
 const results = search1.getResults()
 
-const search2 = new umlsjs.CUISearch(process.env.UMLS_API_KEY)
+const search2 = new UMLSJS.CUISearch(process.env.UMLS_API_KEY)
 search2.init('C0009044')
 await search2.query()
 const result = search2.getResult()

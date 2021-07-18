@@ -1,4 +1,4 @@
-import umlsjs from '../src/index'
+import {UMLSJS} from '../src/index'
 import dotenv from 'dotenv'
 
 beforeAll(() => {
@@ -6,7 +6,7 @@ beforeAll(() => {
 });
 
 test('Get Results for a term in index', async () => {
-  const search1 = new umlsjs.UMLSSearch(process.env.UMLS_API_KEY)
+  const search1 = new UMLSJS.UMLSSearch(process.env.UMLS_API_KEY)
     search1.init('Erythema Multiforme')
     await search1.query()
     const results = search1.getResults()
@@ -14,7 +14,7 @@ test('Get Results for a term in index', async () => {
 })
 
 test('Get Results for a CUI in index', async () => {
-  const search1 = new umlsjs.CUISearch(process.env.UMLS_API_KEY)
+  const search1 = new UMLSJS.CUISearch(process.env.UMLS_API_KEY)
     search1.init('C0009044')
     await search1.query()
     search1.getResult()
