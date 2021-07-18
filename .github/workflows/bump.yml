@@ -10,7 +10,7 @@ jobs:
   bump-version:
     name: "Bump Version on release branch"
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: "Checkout source code"
         uses: "actions/checkout@v2"
