@@ -1,6 +1,6 @@
 {
   "name": "umlsjs",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Nodejs package to access UMLS REST web-services",
   "main": "dist/index.js",
   "files": [
