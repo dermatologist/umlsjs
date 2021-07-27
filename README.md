@@ -59,20 +59,20 @@ search2.init("A10134087");
 await search2.getChildren();
 const result = search2.children;
 
-let st = await token.getSt();
+st = await token.getSt();
 const search2 = new UMLSJS.AUISearch(st);
 search2.init("A10134087");
 await search2.getDescendents();
 const result = search2.descendants;
 
-let st = await token.getSt();
+st = await token.getSt();
 const search2 = new UMLSJS.AUISearch(st);
 search2.init("A10134087");
 await search2.getParents();
 const result = search2.parents;
 
 
-let st = await token.getSt();
+st = await token.getSt();
 const search2 = new UMLSJS.AUISearch(st);
 search2.init("A10134087");
 await search2.getAncestors();
