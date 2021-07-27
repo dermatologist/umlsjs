@@ -1,13 +1,17 @@
 # Changelog
 
-## [Unreleased](https://github.com/dermatologist/umlsjs/tree/HEAD)
+## [v0.5.1](https://github.com/dermatologist/umlsjs/tree/v0.5.1) (2021-07-19)
 
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.5.0...HEAD)
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.5.0...v0.5.1)
 
 **Closed issues:**
 
 - localStorage is available only in a browser context. [\#32](https://github.com/dermatologist/umlsjs/issues/32)
 - Getting up and running [\#31](https://github.com/dermatologist/umlsjs/issues/31)
+
+**Merged pull requests:**
+
+- Patch 1 [\#34](https://github.com/dermatologist/umlsjs/pull/34) ([apar-mistry](https://github.com/apar-mistry))
 
 ## [0.5.0](https://github.com/dermatologist/umlsjs/tree/0.5.0) (2021-07-18)
 
