@@ -3,7 +3,7 @@ import { getService } from '../service/generalService'
 import ConceptModel from '../model/concept'
 import UMLSQueryTemplate from '../model/queryTemplate'
 
-class auiSearch extends UMLSQueryTemplate {
+class AUISearch extends UMLSQueryTemplate {
     async getChildren(){
         const params = this.fillParams({})
         const url = `/content/${this.version}/AUI/${this.term}/children`
@@ -17,7 +17,7 @@ class auiSearch extends UMLSQueryTemplate {
         const response = await getService(this.st, url, params)
         this.parents = response.result
     }
-    
+
     async getAncestors(){
         const params = this.fillParams({})
         const url = `/content/${this.version}/AUI/${this.term}/ancestors`
@@ -36,4 +36,4 @@ class auiSearch extends UMLSQueryTemplate {
     }
 }
 
-export default auiSearch;
+export default AUISearch;
