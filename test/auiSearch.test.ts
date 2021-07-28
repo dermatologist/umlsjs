@@ -4,7 +4,7 @@ import UMLSToken from '../src/model/umlsToken'
 
 import dotenv from 'dotenv'
 
-
+jest.setTimeout(15000);
 var ticket;
 beforeAll(async () => {
     dotenv.config()
@@ -19,6 +19,7 @@ test('Testing getChildren ', async () => {
     search1.init(AUI)
     await search1.getChildren()
     const result = search1.children
+    console.log(result)
     expect(search1.pageCount).toBeGreaterThan(0)
 })
 
@@ -29,10 +30,11 @@ test('Testing getParent ', async () => {
     search1.init(AUI)
     await search1.getParents()
     const result = search1.parents
+    console.log(result)
     expect(search1.pageCount).toBeGreaterThan(0)
 })
 
-
+// These tests take > 5 seconds. Hence jest timeout increased at the top
 test('Testing getAncestors ', async () => {
     const st = await ticket.getSt()
     const search1 = new AUISearch(st)
@@ -40,6 +42,7 @@ test('Testing getAncestors ', async () => {
     search1.init(AUI)
     await search1.getAncestors()
     const result = search1.ancestors
+    console.log(result)
     expect(search1.pageCount).toBeGreaterThan(0)
 })
 
@@ -50,5 +53,6 @@ test('Testing getDescendants ', async () => {
     search1.init(AUI)
     await search1.getDescendents()
     const result = search1.descendants
+    console.log(result)
     expect(search1.pageCount).toBeGreaterThan(0)
 })
