@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased](https://github.com/dermatologist/umlsjs/tree/HEAD)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.6.0...HEAD)
+
+**Merged pull requests:**
+
+- Added AUI function [\#37](https://github.com/dermatologist/umlsjs/pull/37) ([apar-mistry](https://github.com/apar-mistry))
+
+## [v0.6.0](https://github.com/dermatologist/umlsjs/tree/v0.6.0) (2021-07-27)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.5.1...v0.6.0)
+
+**Merged pull requests:**
+
+- build\(deps\): bump actions/setup-node from 2.2.0 to 2.3.0 [\#36](https://github.com/dermatologist/umlsjs/pull/36) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.5.1](https://github.com/dermatologist/umlsjs/tree/v0.5.1) (2021-07-19)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.5.0...v0.5.1)
@@ -21,6 +37,14 @@
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.4.0...pre-v0.4.1)
 
+## [0.4.0](https://github.com/dermatologist/umlsjs/tree/0.4.0) (2021-07-18)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.3.2...0.4.0)
+
+**Closed issues:**
+
+- UMLS REST API wrapper [\#8](https://github.com/dermatologist/umlsjs/issues/8)
+
 **Merged pull requests:**
 
 - build\(deps\): bump actions/setup-node from 1 to 2.2.0 [\#28](https://github.com/dermatologist/umlsjs/pull/28) ([dependabot[bot]](https://github.com/apps/dependabot))
@@ -36,14 +60,6 @@
 - build\(deps\): bump lodash from 4.17.20 to 4.17.21 [\#15](https://github.com/dermatologist/umlsjs/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
 - build\(deps\): bump y18n from 4.0.0 to 4.0.1 [\#14](https://github.com/dermatologist/umlsjs/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
 - build\(deps\): bump axios from 0.19.2 to 0.21.1 [\#13](https://github.com/dermatologist/umlsjs/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [0.4.0](https://github.com/dermatologist/umlsjs/tree/0.4.0) (2021-07-18)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/0.3.2...0.4.0)
-
-**Closed issues:**
-
-- UMLS REST API wrapper [\#8](https://github.com/dermatologist/umlsjs/issues/8)
 
 ## [0.3.2](https://github.com/dermatologist/umlsjs/tree/0.3.2) (2020-10-21)
 
