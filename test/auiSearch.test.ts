@@ -1,9 +1,8 @@
-import auiSearch from '../src/function/auiSearch'
+import AUISearch from '../src/function/auiSearch'
 import UMLSToken from '../src/model/umlsToken'
 
 
 import dotenv from 'dotenv'
-import auiSearch from 'umlsjs/dist/function/auiSearch';
 
 
 var ticket;
@@ -15,7 +14,7 @@ beforeAll(async () => {
 
 test('Testing getChildren ', async () => {
     const st = await ticket.getSt()
-    const search1 = new auiSearch(st)
+    const search1 = new AUISearch(st)
     const AUI = 'A10134087'
     search1.init(AUI)
     await search1.getChildren()
@@ -25,10 +24,10 @@ test('Testing getChildren ', async () => {
 
 test('Testing getParent ', async () => {
     const st = await ticket.getSt()
-    const search1 = new auiSearch(st)
+    const search1 = new AUISearch(st)
     const AUI = 'A10134087'
     search1.init(AUI)
-    await search1.getParent()
+    await search1.getParents()
     const result = search1.parents
     expect(search1.pageCount).toBeGreaterThan(0)
 })
@@ -36,7 +35,7 @@ test('Testing getParent ', async () => {
 
 test('Testing getAncestors ', async () => {
     const st = await ticket.getSt()
-    const search1 = new auiSearch(st)
+    const search1 = new AUISearch(st)
     const AUI = 'A10134087'
     search1.init(AUI)
     await search1.getAncestors()
@@ -46,7 +45,7 @@ test('Testing getAncestors ', async () => {
 
 test('Testing getDescendants ', async () => {
     const st = await ticket.getSt()
-    const search1 = new auiSearch(st)
+    const search1 = new AUISearch(st)
     const AUI = 'A10134087'
     search1.init(AUI)
     await search1.getDescendents()
