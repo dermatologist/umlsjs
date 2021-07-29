@@ -29,7 +29,17 @@ class UMLSQueryTemplate {
     definition?: typeof DefinitionModel
     relations?: Array<typeof ConceptRelationModel>
     relation?: typeof ConceptRelationModel
-
+    child?: typeof AtomModel
+    children?: Array<typeof AtomModel>
+                  
+    parent?: typeof AtomModel
+    parents?: Array<typeof AtomModel>
+                  
+    ancestor?: typeof AtomModel
+    ancestors?: Array<typeof AtomModel>     
+                  
+    descendant?: typeof AtomModel
+    descendants?: Array<typeof AtomModel>                
     constructor(st){
         this.st = st
         this.results = []

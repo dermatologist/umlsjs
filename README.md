@@ -35,14 +35,49 @@ search2.init('C0009044')
 await search2.query()
 const result = search2.getResult()
 
+st = await token.getSt()
+const search2 = new UMLSJS.CUISearch(st)
+search2.init('C0009044')
 await search2.getAtoms()
 const result = search2.atoms
 
+st = await token.getSt()
+const search2 = new UMLSJS.CUISearch(st)
+search2.init('C0009044')
 await search2.getDefinitions()
 const result = search2.definitions
 
+st = await token.getSt()
+const search2 = new UMLSJS.CUISearch(st)
+search2.init('C0009044')
 await search2.getRelations()
 const result = search2.relations
+
+st = await token.getSt();
+const search2 = new UMLSJS.AUISearch(st);
+search2.init("A10134087");
+await search2.getChildren();
+const result = search2.children;
+
+st = await token.getSt();
+const search2 = new UMLSJS.AUISearch(st);
+search2.init("A10134087");
+await search2.getDescendents();
+const result = search2.descendants;
+
+st = await token.getSt();
+const search2 = new UMLSJS.AUISearch(st);
+search2.init("A10134087");
+await search2.getParents();
+const result = search2.parents;
+
+
+st = await token.getSt();
+const search2 = new UMLSJS.AUISearch(st);
+search2.init("A10134087");
+await search2.getAncestors();
+const result = search2.ancestors;
+
 ```
 
 
@@ -81,3 +116,4 @@ nextPage(2)
 ## Contributor(s)
 
 * [Bell Eapen](https://nuchange.ca) | [![Twitter Follow](https://img.shields.io/twitter/follow/beapen?style=social)](https://twitter.com/beapen)
+* [Apar Mistry](https://github.com/apar-mistry)
