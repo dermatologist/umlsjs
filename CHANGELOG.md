@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.0](https://github.com/dermatologist/umlsjs/tree/0.8.0) (2021-07-29)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.8.0...0.8.0)
+
+## [v0.8.0](https://github.com/dermatologist/umlsjs/tree/v0.8.0) (2021-07-29)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.7.0...v0.8.0)
+
+**Merged pull requests:**
+
+- Added author tag [\#39](https://github.com/dermatologist/umlsjs/pull/39) ([apar-mistry](https://github.com/apar-mistry))
+- Added name to contributors [\#38](https://github.com/dermatologist/umlsjs/pull/38) ([apar-mistry](https://github.com/apar-mistry))
+
 ## [v0.7.0](https://github.com/dermatologist/umlsjs/tree/v0.7.0) (2021-07-28)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.6.1...v0.7.0)
