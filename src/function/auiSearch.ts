@@ -1,4 +1,6 @@
-
+/**
+ * @author Apar Mistry <amist007@ucr.edu>
+ */
 import { getService } from '../service/generalService'
 import ConceptModel from '../model/concept'
 import UMLSQueryTemplate from '../model/queryTemplate'
