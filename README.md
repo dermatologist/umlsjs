@@ -116,3 +116,4 @@ nextPage(2)
 ## Contributor(s)
 
 * [Bell Eapen](https://nuchange.ca) | [![Twitter Follow](https://img.shields.io/twitter/follow/beapen?style=social)](https://twitter.com/beapen)
+* [Apar Mistry](https://github.com/apar-mistry)
