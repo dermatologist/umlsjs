@@ -3,6 +3,11 @@ import querystring from 'querystring';
 import parser from 'fast-xml-parser'
 import he from 'he'
 
+/**
+ * @author Bell Eapen
+ * @param {string} tgt - The TGT to use for the request
+ * @returns {string} The ST token
+ */
 export const getSt = async tgt => {
   const config = {
     headers: {
@@ -14,6 +19,11 @@ export const getSt = async tgt => {
   return response.data
 }
 
+/**
+ * @author Bell Eapen
+ * @param {string} apikey - The API Key obtained from UMLS
+ * @returns {string} The TGT token
+ */
 export const getTgt = async apikey => {
     const options = {
       attributeNamePrefix : "U_",
