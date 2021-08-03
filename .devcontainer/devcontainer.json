@@ -3,6 +3,7 @@
     "extensions": [
         "dbaeumer.vscode-eslint"
     ],
+    "postCreateCommand": "npm install",
     "forwardPorts": [
         3000
     ]
