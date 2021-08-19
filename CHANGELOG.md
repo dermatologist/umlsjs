@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.9.2](https://github.com/dermatologist/umlsjs/tree/v0.9.2) (2021-08-15)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.1...v0.9.2)
+
+**Merged pull requests:**
+
+- build\(deps\): bump path-parse from 1.0.6 to 1.0.7 [\#43](https://github.com/dermatologist/umlsjs/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.9.1](https://github.com/dermatologist/umlsjs/tree/v0.9.1) (2021-08-03)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.0...v0.9.1)
