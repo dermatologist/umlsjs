@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.9.3](https://github.com/dermatologist/umlsjs/tree/v0.9.3) (2021-08-19)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.2...v0.9.3)
+
+**Merged pull requests:**
+
+- build\(deps-dev\): bump tslib from 2.3.0 to 2.3.1 [\#44](https://github.com/dermatologist/umlsjs/pull/44) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.9.2](https://github.com/dermatologist/umlsjs/tree/v0.9.2) (2021-08-15)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.1...v0.9.2)
