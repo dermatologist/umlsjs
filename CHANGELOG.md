@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.9.5](https://github.com/dermatologist/umlsjs/tree/v0.9.5) (2021-09-21)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.4...v0.9.5)
+
+**Merged pull requests:**
+
+- build\(deps-dev\): bump husky from 7.0.1 to 7.0.2 [\#47](https://github.com/dermatologist/umlsjs/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.9.4](https://github.com/dermatologist/umlsjs/tree/v0.9.4) (2021-08-28)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.3...v0.9.4)
