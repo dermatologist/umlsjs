@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.9.6](https://github.com/dermatologist/umlsjs/tree/v0.9.6) (2021-09-22)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.5...v0.9.6)
+
+**Merged pull requests:**
+
+- build\(deps\): bump JamesIves/github-pages-deploy-action from 4.1.4 to 4.1.5 [\#48](https://github.com/dermatologist/umlsjs/pull/48) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.9.5](https://github.com/dermatologist/umlsjs/tree/v0.9.5) (2021-09-21)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.4...v0.9.5)
