@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.9.8](https://github.com/dermatologist/umlsjs/tree/v0.9.8) (2021-10-12)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.7...v0.9.8)
+
+**Merged pull requests:**
+
+- build\(deps\): bump nth-check from 2.0.0 to 2.0.1 [\#54](https://github.com/dermatologist/umlsjs/pull/54) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump tmpl from 1.0.4 to 1.0.5 [\#53](https://github.com/dermatologist/umlsjs/pull/53) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.9.7](https://github.com/dermatologist/umlsjs/tree/v0.9.7) (2021-09-25)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.6...v0.9.7)
