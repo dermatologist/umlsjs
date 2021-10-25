@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.10.0](https://github.com/dermatologist/umlsjs/tree/v0.10.0) (2021-10-15)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.9...v0.10.0)
+
+**Merged pull requests:**
+
+- build\(deps\): bump fast-xml-parser from 3.19.0 to 3.20.3 [\#55](https://github.com/dermatologist/umlsjs/pull/55) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.9.9](https://github.com/dermatologist/umlsjs/tree/v0.9.9) (2021-10-12)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.8...v0.9.9)
