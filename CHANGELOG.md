@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.12.0](https://github.com/dermatologist/umlsjs/tree/v0.12.0) (2021-11-05)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.11.0...v0.12.0)
+
+**Merged pull requests:**
+
+- build\(deps-dev\): bump typescript from 4.3.5 to 4.4.4 [\#63](https://github.com/dermatologist/umlsjs/pull/63) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump actions/setup-node from 2.3.0 to 2.4.1 [\#56](https://github.com/dermatologist/umlsjs/pull/56) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.11.0](https://github.com/dermatologist/umlsjs/tree/v0.11.0) (2021-10-25)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.10.0...v0.11.0)
