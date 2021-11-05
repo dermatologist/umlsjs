@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.11.0](https://github.com/dermatologist/umlsjs/tree/v0.11.0) (2021-10-25)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.10.0...v0.11.0)
+
+**Merged pull requests:**
+
+- build\(deps-dev\): bump typedoc from 0.21.6 to 0.22.6 [\#62](https://github.com/dermatologist/umlsjs/pull/62) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.10.0](https://github.com/dermatologist/umlsjs/tree/v0.10.0) (2021-10-15)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.9.9...v0.10.0)
