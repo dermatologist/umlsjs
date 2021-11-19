@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.15.0](https://github.com/dermatologist/umlsjs/tree/v0.15.0) (2021-11-17)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.14.0...v0.15.0)
+
+**Merged pull requests:**
+
+- build\(deps\): bump axios from 0.21.4 to 0.24.0 [\#68](https://github.com/dermatologist/umlsjs/pull/68) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.14.0](https://github.com/dermatologist/umlsjs/tree/v0.14.0) (2021-11-15)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.13.1...v0.14.0)
