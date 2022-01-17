@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^5.0.1",
-    "dotenv": "^10.0.0",
+    "dotenv": "^14.1.0",
     "husky": "^7.0.1",
     "size-limit": "^5.0.1",
     "tsdx": "^0.14.1",
