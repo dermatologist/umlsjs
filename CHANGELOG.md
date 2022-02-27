@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.17.1](https://github.com/dermatologist/umlsjs/tree/v0.17.1) (2022-01-14)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.17.0...v0.17.1)
+
+**Merged pull requests:**
+
+- build\(deps\): bump actions/setup-node from 2.5.0 to 2.5.1 [\#81](https://github.com/dermatologist/umlsjs/pull/81) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.17.0](https://github.com/dermatologist/umlsjs/tree/v0.17.0) (2022-01-03)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.16.0...v0.17.0)
