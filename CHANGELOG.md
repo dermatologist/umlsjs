@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.17.2](https://github.com/dermatologist/umlsjs/tree/v0.17.2) (2022-02-27)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.17.1...v0.17.2)
+
+**Merged pull requests:**
+
+- build\(deps\): bump shelljs from 0.8.4 to 0.8.5 [\#85](https://github.com/dermatologist/umlsjs/pull/85) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.17.1](https://github.com/dermatologist/umlsjs/tree/v0.17.1) (2022-01-14)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.17.0...v0.17.1)
