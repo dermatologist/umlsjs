@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.0.1](https://github.com/dermatologist/umlsjs/tree/v1.0.1) (2022-03-28)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.0.0...v1.0.1)
+
+**Merged pull requests:**
+
+- build\(deps\): bump follow-redirects from 1.14.5 to 1.14.8 [\#95](https://github.com/dermatologist/umlsjs/pull/95) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.0.0](https://github.com/dermatologist/umlsjs/tree/v1.0.0) (2022-03-20)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.17.3...v1.0.0)
