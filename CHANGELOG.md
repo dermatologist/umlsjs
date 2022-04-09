@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.1.2](https://github.com/dermatologist/umlsjs/tree/v1.1.2) (2022-04-09)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.1...v1.1.2)
+
+**Merged pull requests:**
+
+- build\(deps\): bump phips28/gh-action-bump-version from 8.0.18 to 9.0.16 [\#92](https://github.com/dermatologist/umlsjs/pull/92) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.1.1](https://github.com/dermatologist/umlsjs/tree/v1.1.1) (2022-04-07)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.0...v1.1.1)
