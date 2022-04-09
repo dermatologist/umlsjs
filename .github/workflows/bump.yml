@@ -26,6 +26,7 @@ jobs:
         uses: "actions/setup-node@v2.5.1"
         with:
           node-version: 12
+        run: npm ci
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@v9.0.16"
         with:
