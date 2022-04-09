@@ -1,5 +1,14 @@
 # Changelog
 
+## [v2.0.0](https://github.com/dermatologist/umlsjs/tree/v2.0.0) (2022-04-09)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.2...v2.0.0)
+
+**Merged pull requests:**
+
+- build\(deps\): bump ansi-regex from 3.0.0 to 3.0.1 [\#107](https://github.com/dermatologist/umlsjs/pull/107) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump actions/checkout from 2 to 3 [\#101](https://github.com/dermatologist/umlsjs/pull/101) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.1.2](https://github.com/dermatologist/umlsjs/tree/v1.1.2) (2022-04-09)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.1...v1.1.2)
