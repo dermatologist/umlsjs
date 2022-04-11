@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.10.2](https://github.com/dermatologist/umlsjs/tree/v0.10.2) (2022-04-11)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v2.0.1...v0.10.2)
+
+**Merged pull requests:**
+
+- Update package.json [\#111](https://github.com/dermatologist/umlsjs/pull/111) ([dermatologist](https://github.com/dermatologist))
+
 ## [v2.0.1](https://github.com/dermatologist/umlsjs/tree/v2.0.1) (2022-04-09)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v2.0.0...v2.0.1)
