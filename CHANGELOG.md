@@ -1,5 +1,9 @@
 # Changelog
 
+## [v2.0.1](https://github.com/dermatologist/umlsjs/tree/v2.0.1) (2022-04-09)
+
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v2.0.0...v2.0.1)
+
 ## [v2.0.0](https://github.com/dermatologist/umlsjs/tree/v2.0.0) (2022-04-09)
 
 [Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.2...v2.0.0)
