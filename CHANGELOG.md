@@ -1,77 +1,24 @@
 # Changelog
 
-## [v0.10.2](https://github.com/dermatologist/umlsjs/tree/v0.10.2) (2022-04-11)
+## [v1.2.0](https://github.com/dermatologist/umlsjs/tree/v1.2.0) (2022-04-13)
 
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v2.0.1...v0.10.2)
+[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.17.3...v1.2.0)
 
 **Merged pull requests:**
 
+- Update bump.yml [\#116](https://github.com/dermatologist/umlsjs/pull/116) ([dermatologist](https://github.com/dermatologist))
+- build\(deps-dev\): bump typescript from 4.5.5 to 4.6.3 [\#112](https://github.com/dermatologist/umlsjs/pull/112) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Update package.json [\#111](https://github.com/dermatologist/umlsjs/pull/111) ([dermatologist](https://github.com/dermatologist))
-
-## [v2.0.1](https://github.com/dermatologist/umlsjs/tree/v2.0.1) (2022-04-09)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v2.0.0...v2.0.1)
-
-## [v2.0.0](https://github.com/dermatologist/umlsjs/tree/v2.0.0) (2022-04-09)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.2...v2.0.0)
-
-**Merged pull requests:**
-
+- build\(deps\): bump JamesIves/github-pages-deploy-action from 4.1.5 to 4.3.0 [\#109](https://github.com/dermatologist/umlsjs/pull/109) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump actions/setup-node from 2.5.1 to 3.1.0 [\#108](https://github.com/dermatologist/umlsjs/pull/108) ([dependabot[bot]](https://github.com/apps/dependabot))
 - build\(deps\): bump ansi-regex from 3.0.0 to 3.0.1 [\#107](https://github.com/dermatologist/umlsjs/pull/107) ([dependabot[bot]](https://github.com/apps/dependabot))
-- build\(deps\): bump actions/checkout from 2 to 3 [\#101](https://github.com/dermatologist/umlsjs/pull/101) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.1.2](https://github.com/dermatologist/umlsjs/tree/v1.1.2) (2022-04-09)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.1...v1.1.2)
-
-**Merged pull requests:**
-
-- build\(deps\): bump phips28/gh-action-bump-version from 8.0.18 to 9.0.16 [\#92](https://github.com/dermatologist/umlsjs/pull/92) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.1.1](https://github.com/dermatologist/umlsjs/tree/v1.1.1) (2022-04-07)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.1.0...v1.1.1)
-
-**Merged pull requests:**
-
-- build\(deps-dev\): bump typedoc from 0.22.10 to 0.22.13 [\#105](https://github.com/dermatologist/umlsjs/pull/105) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.1.0](https://github.com/dermatologist/umlsjs/tree/v1.1.0) (2022-04-04)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.0.3...v1.1.0)
-
-**Merged pull requests:**
-
-- build\(deps\): bump axios from 0.24.0 to 0.26.1 [\#103](https://github.com/dermatologist/umlsjs/pull/103) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.0.3](https://github.com/dermatologist/umlsjs/tree/v1.0.3) (2022-03-30)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.0.2...v1.0.3)
-
-**Merged pull requests:**
-
-- build\(deps-dev\): bump typescript from 4.5.4 to 4.5.5 [\#98](https://github.com/dermatologist/umlsjs/pull/98) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.0.2](https://github.com/dermatologist/umlsjs/tree/v1.0.2) (2022-03-30)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.0.1...v1.0.2)
-
-**Merged pull requests:**
-
 - build\(deps\): bump minimist from 1.2.5 to 1.2.6 [\#106](https://github.com/dermatologist/umlsjs/pull/106) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.0.1](https://github.com/dermatologist/umlsjs/tree/v1.0.1) (2022-03-28)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v1.0.0...v1.0.1)
-
-**Merged pull requests:**
-
+- build\(deps-dev\): bump typedoc from 0.22.10 to 0.22.13 [\#105](https://github.com/dermatologist/umlsjs/pull/105) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump axios from 0.24.0 to 0.26.1 [\#103](https://github.com/dermatologist/umlsjs/pull/103) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump actions/checkout from 2 to 3 [\#101](https://github.com/dermatologist/umlsjs/pull/101) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps-dev\): bump typescript from 4.5.4 to 4.5.5 [\#98](https://github.com/dermatologist/umlsjs/pull/98) ([dependabot[bot]](https://github.com/apps/dependabot))
 - build\(deps\): bump follow-redirects from 1.14.5 to 1.14.8 [\#95](https://github.com/dermatologist/umlsjs/pull/95) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [v1.0.0](https://github.com/dermatologist/umlsjs/tree/v1.0.0) (2022-03-20)
-
-[Full Changelog](https://github.com/dermatologist/umlsjs/compare/v0.17.3...v1.0.0)
+- build\(deps\): bump phips28/gh-action-bump-version from 8.0.18 to 9.0.16 [\#92](https://github.com/dermatologist/umlsjs/pull/92) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v0.17.3](https://github.com/dermatologist/umlsjs/tree/v0.17.3) (2022-03-20)
 
