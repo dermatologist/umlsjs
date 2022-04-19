@@ -26,7 +26,7 @@ test('Testing getChildren ', async () => {
 test('Testing getParent ', async () => {
     const st = await ticket.getSt()
     const search1 = new AUISearch(st)
-    const AUI = 'A10134087'
+    const AUI = 'A19720766'
     search1.init(AUI)
     await search1.getParents()
     const result = search1.parents
@@ -38,7 +38,7 @@ test('Testing getParent ', async () => {
 test('Testing getAncestors ', async () => {
     const st = await ticket.getSt()
     const search1 = new AUISearch(st)
-    const AUI = 'A10134087'
+    const AUI = 'A19720766'
     search1.init(AUI)
     await search1.getAncestors()
     const result = search1.ancestors
