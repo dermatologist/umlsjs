@@ -1,137 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Home</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-
-<body>
-
-<div id="main">
-
-    <h1 class="page-title">Home</h1>
-
-    
-
-
-
-    
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    <section>
-        <article><h1>umlsjs (For UMLS REST APIs)</h1>
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>umlsjs</title><meta name="description" content="Documentation for umlsjs"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">umlsjs</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>umlsjs </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#umlsjs-for-umls-rest-apis" id="umlsjs-for-umls-rest-apis" style="color: inherit; text-decoration: none;">
+  <h1>umlsjs (For UMLS REST APIs)</h1>
+</a>
 <p><a href="https://github.com/dermatologist/fhir-questionnaire-render-react"><img src="https://forthebadge.com/images/badges/made-with-typescript.svg" alt="forthebadge"></a>
 <a href="https://www.npmjs.com/package/umlsjs"><img src="https://img.shields.io/npm/dt/umlsjs" alt="npm"></a>
 <a href="https://nuchange.ca"><img src="https://github.com/dermatologist/umlsjs/workflows/Publish/badge.svg" alt="Build"></a></p>
-<h2>About</h2>
+
+<a href="#about" id="about" style="color: inherit; text-decoration: none;">
+  <h2>About</h2>
+</a>
 <p>This is an unofficial package for accessing <a href="https://documentation.uts.nlm.nih.gov/rest/home.html">UMLS REST APIs</a>. The technical documentation for the APIs is available <a href="https://documentation.uts.nlm.nih.gov/">here.</a> You need an API-KEY to access UMLS services. You can apply for the license <a href="https://uts.nlm.nih.gov/license.html">here.</a></p>
-<h2>Install</h2>
-<pre class="prettyprint source"><code>npm install umlsjs --save
 
+<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+  <h2>Install</h2>
+</a>
+<pre><code><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> </span><span class="hl-0">umlsjs</span><span class="hl-1"> --</span><span class="hl-0">save</span><br/>
 </code></pre>
-<h2>Usage</h2>
-<pre class="prettyprint source"><code>import {UMLSJS} from 'umlsjs'
-// Create Once
-const umls_key = &quot;YOUR_KEY_HERE&quot; ;
-const token = new UMLSJS.UMLSToken(umls_key)
 
-// Generate with each request
-let st = await token.getSt()
-const search1 = new UMLSJS.UMLSSearch(st)
-search1.init('Erythema Multiforme')
-await search1.query()
-const results = search1.getResults()
-
-// Generate with each request
-st = await token.getSt()
-const search2 = new UMLSJS.CUISearch(st)
-search2.init('C0009044')
-await search2.query()
-const result = search2.getResult()
-
-st = await token.getSt()
-const search2 = new UMLSJS.CUISearch(st)
-search2.init('C0009044')
-await search2.getAtoms()
-const result = search2.atoms
-
-st = await token.getSt()
-const search2 = new UMLSJS.CUISearch(st)
-search2.init('C0009044')
-await search2.getDefinitions()
-const result = search2.definitions
-
-st = await token.getSt()
-const search2 = new UMLSJS.CUISearch(st)
-search2.init('C0009044')
-await search2.getRelations()
-const result = search2.relations
-
-st = await token.getSt();
-const search2 = new UMLSJS.AUISearch(st);
-search2.init(&quot;A10134087&quot;);
-await search2.getChildren();
-const result = search2.children;
-
-st = await token.getSt();
-const search2 = new UMLSJS.AUISearch(st);
-search2.init(&quot;A10134087&quot;);
-await search2.getDescendents();
-const result = search2.descendants;
-
-st = await token.getSt();
-const search2 = new UMLSJS.AUISearch(st);
-search2.init(&quot;A10134087&quot;);
-await search2.getParents();
-const result = search2.parents;
-
-
-st = await token.getSt();
-const search2 = new UMLSJS.AUISearch(st);
-search2.init(&quot;A10134087&quot;);
-await search2.getAncestors();
-const result = search2.ancestors;
-
+<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+  <h2>Usage</h2>
+</a>
+<pre><code><span class="hl-2">import</span><span class="hl-1"> {</span><span class="hl-0">UMLSJS</span><span class="hl-1">} </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;umlsjs&#39;</span><br/><span class="hl-4">// Create Once</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">umls_key</span><span class="hl-1"> = </span><span class="hl-3">&quot;YOUR_KEY_HERE&quot;</span><span class="hl-1"> ;</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">token</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">UMLSToken</span><span class="hl-1">(</span><span class="hl-0">umls_key</span><span class="hl-1">)</span><br/><br/><span class="hl-4">// Generate with each request</span><br/><span class="hl-5">let</span><span class="hl-1"> </span><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search1</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">UMLSSearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">)</span><br/><span class="hl-0">search1</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&#39;Erythema Multiforme&#39;</span><span class="hl-1">)</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search1</span><span class="hl-1">.</span><span class="hl-7">query</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">results</span><span class="hl-1"> = </span><span class="hl-0">search1</span><span class="hl-1">.</span><span class="hl-7">getResults</span><span class="hl-1">()</span><br/><br/><span class="hl-4">// Generate with each request</span><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">CUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">)</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&#39;C0009044&#39;</span><span class="hl-1">)</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">query</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getResult</span><span class="hl-1">()</span><br/><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">CUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">)</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&#39;C0009044&#39;</span><span class="hl-1">)</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getAtoms</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-0">atoms</span><br/><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">CUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">)</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&#39;C0009044&#39;</span><span class="hl-1">)</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getDefinitions</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-0">definitions</span><br/><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">CUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">)</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&#39;C0009044&#39;</span><span class="hl-1">)</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getRelations</span><span class="hl-1">()</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-0">relations</span><br/><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">AUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">);</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&quot;A10134087&quot;</span><span class="hl-1">);</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getChildren</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-0">children</span><span class="hl-1">;</span><br/><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">AUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">);</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&quot;A10134087&quot;</span><span class="hl-1">);</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getDescendents</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-0">descendants</span><span class="hl-1">;</span><br/><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">AUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">);</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&quot;A10134087&quot;</span><span class="hl-1">);</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getParents</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-0">parents</span><span class="hl-1">;</span><br/><br/><br/><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">search2</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">AUISearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">);</span><br/><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">init</span><span class="hl-1">(</span><span class="hl-3">&quot;A10134087&quot;</span><span class="hl-1">);</span><br/><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-7">getAncestors</span><span class="hl-1">();</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-0">search2</span><span class="hl-1">.</span><span class="hl-0">ancestors</span><span class="hl-1">;</span><br/>
 </code></pre>
-<pre class="prettyprint source"><code>const umlsjs = require('umlsjs)
-
-// Create Once
-const umls_key = &quot;YOUR_KEY_HERE&quot; ;
-const token = new umlsjs.UMLSJS.UMLSToken(umls_key)
-
-// Generate with each request
-let st = await token.getSt()
-const search1 = new umlsjs.UMLSJS.UMLSSearch(st)
+<pre><code><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">umlsjs</span><span class="hl-1"> = </span><span class="hl-7">require</span><span class="hl-1">(</span><span class="hl-3">&#39;umlsjs</span><span class="hl-8">)</span><br/><br/><span class="hl-4">// Create Once</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-0">umls_key</span><span class="hl-1"> = </span><span class="hl-3">&quot;YOUR_KEY_HERE&quot;</span><span class="hl-1"> ;</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-0">umlsjs</span><span class="hl-1">.</span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">UMLSToken</span><span class="hl-1">(</span><span class="hl-0">umls_key</span><span class="hl-1">)</span><br/><br/><span class="hl-4">// Generate with each request</span><br/><span class="hl-0">let</span><span class="hl-1"> </span><span class="hl-0">st</span><span class="hl-1"> = </span><span class="hl-2">await</span><span class="hl-1"> </span><span class="hl-0">token</span><span class="hl-1">.</span><span class="hl-7">getSt</span><span class="hl-1">()</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-0">search1</span><span class="hl-1"> = </span><span class="hl-5">new</span><span class="hl-1"> </span><span class="hl-0">umlsjs</span><span class="hl-1">.</span><span class="hl-6">UMLSJS</span><span class="hl-1">.</span><span class="hl-7">UMLSSearch</span><span class="hl-1">(</span><span class="hl-0">st</span><span class="hl-1">)</span>
 </code></pre>
-<h3>pagination</h3>
-<pre class="prettyprint source"><code>nextPage()
-nextPage(2)
+
+<a href="#pagination" id="pagination" style="color: inherit; text-decoration: none;">
+  <h3>pagination</h3>
+</a>
+<pre><code><span class="hl-7">nextPage</span><span class="hl-1">()</span><br/><span class="hl-7">nextPage</span><span class="hl-1">(</span><span class="hl-9">2</span><span class="hl-1">)</span>
 </code></pre>
-<h2>More to come</h2>
+
+<a href="#more-to-come" id="more-to-come" style="color: inherit; text-decoration: none;">
+  <h2>More to come</h2>
+</a>
 <ul>
 <li>UMLSContent</li>
 <li>UMLSSubsets</li>
@@ -139,36 +41,20 @@ nextPage(2)
 <li>UMLSContentView</li>
 <li>UMLSCrosswalk</li>
 </ul>
-<h2>Want to join development?</h2>
+
+<a href="#want-to-join-development" id="want-to-join-development" style="color: inherit; text-decoration: none;">
+  <h2>Want to join development?</h2>
+</a>
 <ul>
 <li>Rename .env.example to .env and add your API key.</li>
 <li>Submit PR to the develop branch.</li>
 </ul>
-<h2>Contributor(s)</h2>
+
+<a href="#contributors" id="contributors" style="color: inherit; text-decoration: none;">
+  <h2>Contributor(s)</h2>
+</a>
 <ul>
 <li><a href="https://nuchange.ca">Bell Eapen</a> | <a href="https://twitter.com/beapen"><img src="https://img.shields.io/twitter/follow/beapen?style=social" alt="Twitter Follow"></a></li>
 <li><a href="https://github.com/apar-mistry">Apar Mistry</a></li>
-</ul></article>
-    </section>
-
-
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Jul 29 2021 13:08:49 GMT+0000 (Coordinated Universal Time)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
-</html>
+</ul>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-variable"><a href="modules.html#UMLSJS" class="tsd-kind-icon">UMLSJS</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
