@@ -20,7 +20,7 @@ jobs:
         env:
           UMLS_API_KEY: ${{secrets.umls_api_key}}
       - name: Deploy Docs 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: docs # The folder the action should deploy.
